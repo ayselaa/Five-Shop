@@ -3,6 +3,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./components/Pages/HomePage/Home";
 import Route from "./components/Route/Route"
 import Catalog from "./components/Pages/CatalogPage/Catalog";
+import CertificatePage from "./components/Pages/CertificatePage/CertificatePage";
 
 const router = createBrowserRouter([
   {
@@ -11,6 +12,7 @@ const router = createBrowserRouter([
     children: [
       { path: "/", element: <Home /> },
       { path: "/catalog", element: <Catalog/> },
+      { path: "/certificate", element: <CertificatePage/> },
     ],
   },
 ]);

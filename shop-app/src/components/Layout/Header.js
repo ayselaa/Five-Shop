@@ -21,7 +21,7 @@ const Header = () => {
 							<li><Link >Новая колекция</Link></li>
 							<li><Link to="#">Распродажи</Link></li>
 							<li><Link to={"/catalog"}>Подборка для вас</Link></li>
-							<li><Link to="#">Купить сертификат</Link></li>
+							<li><Link to={"/certificate"}>Купить сертификат</Link></li>
 							<li><Link to="#">Как заказать товар</Link></li>
 						</ul>
 						<div className="header-mob">
