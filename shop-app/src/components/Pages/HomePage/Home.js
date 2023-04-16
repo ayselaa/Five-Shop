@@ -7,6 +7,9 @@ import Products from './Sections/Products/Products'
 import Info from './Sections/Info/Info'
 import Popular from './Sections/Popular/Popular'
 import Cloth from './Sections/Cloth/Cloth'
+import Universal from './Sections/Universal/Universal'
+import Review from './Sections/Review/Review'
+import Advantages from './Sections/Advantages/Advantages'
 
 const HomePage = () => {
   return (
@@ -19,6 +22,9 @@ const HomePage = () => {
       <Info/>
       <Popular/>
       <Cloth/>
+      <Universal/>
+      <Review/>
+      <Advantages/>
     </React.Fragment>
   )
 }

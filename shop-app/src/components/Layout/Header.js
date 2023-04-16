@@ -17,8 +17,8 @@ const Header = () => {
 				<div className="header-row">
 					<div className="header-main">
 						<ul className="header-menu">
-							<li><Link to="#" className="active">Главная</Link></li>
-							<li><Link to="#">Новая колекция</Link></li>
+							<li><Link to="/" className="active">Главная</Link></li>
+							<li><Link to={"/catalog"}>Новая колекция</Link></li>
 							<li><Link to="#">Распродажи</Link></li>
 							<li><Link to="#">Подборка для вас</Link></li>
 							<li><Link to="#">Купить сертификат</Link></li>
