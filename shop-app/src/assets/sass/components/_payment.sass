@@ -1,0 +1,100 @@
+@import "vars"
+
+.payment
+	padding-bottom: 41px
+	&-row
+		display: flex
+		flex-flow: row nowrap
+		align-items: flex-start
+	&-sidebar
+		min-width: 430px
+		width: 430px
+		padding: 37px
+		background: #F6F6F6
+		border-radius: 0px 0px 12px 12px
+		text-align: center
+		ul
+			li
+				padding-bottom: 12px
+				a
+					display: block
+					font-size: 14px
+					line-height: 18px
+					font-weight: 600
+					color: rgba(#000, 0.7)
+					padding: 26px 15px
+					&.active
+						background: #212121
+						color: #fff
+						border-radius: 12px
+				&:last-child
+					padding-bottom: 0
+	&-content
+		width: 100%
+		padding-left: 49px
+		ol,ul,p
+			font-size: 16px
+			line-height: 28px
+			font-weight: 600
+			color: rgba(#000, 0.8)
+	&-title
+		display: block
+		font-size: 16px
+		line-height: 18px
+		font-weight: bold
+		color: #212121
+		padding: 29px 0
+		background-color: #F6F6F6
+		position: relative
+		margin: 0 0 19px
+		&::after
+			content: ''
+			position: absolute
+			top: 0
+			left: -50px
+			width: 50px
+			height: 100%
+			background-color: #F6F6F6
+
+@media only screen and (max-width : 1280px)
+	.payment
+		&-sidebar
+			min-width: 340px
+			width: 340px
+			padding: 15px
+			ul
+				li
+					a
+						padding: 15px
+		&-content
+			padding-left: 30px
+		&-title
+			&::after
+				width: 30px
+				left: -30px
+
+@media only screen and (max-width : 1080px)
+	.payment
+		&-sidebar
+			min-width: 270px
+			width: 270px
+
+@media only screen and (max-width : 768px)
+	.payment
+		&-row
+			display: block
+		&-sidebar
+			min-width: auto
+			width: 100%
+			margin-bottom: 30px
+		&-content
+			padding: 0
+			ol,ul,p
+				font-size: 14px
+				line-height: 1.4
+		&-title
+			padding: 0
+			margin: 0 0 25px
+			background: none
+			&::after
+				display: none

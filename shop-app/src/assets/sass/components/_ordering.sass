@@ -1,0 +1,104 @@
+@import "vars"
+
+.ordering
+	&-top
+		display: block
+		cursor: pointer
+		padding: 25px 15px
+		font-size: 16px
+		line-height: 20px
+		font-weight: 600
+		color: #212121
+		background: #F6F6F6
+		text-align: center
+		transition: color $transition, background $transition
+		b
+			display: none
+			font-weight: 600
+	&-content
+		display: none
+		background: #F6F6F6
+		padding: 49px 0
+	&-row
+		display: flex
+		flex-flow: row nowrap
+		align-items: center
+	&-col
+		width: 21%
+		&:nth-child(4)
+			.ordering
+				&-tit
+					font-size: 14px
+					line-height: 17px
+		&:nth-child(5)
+			width: 16%
+			min-width: 200px
+	&-sub
+		display: block
+		font-size: 14px
+		line-height: 17px
+		font-weight: 600
+		color: #555
+		margin: 0 0 13px
+	&-img
+		margin-bottom: 13px
+		img,svg
+			max-height: 129px
+	&-tit
+		display: block
+		max-width: 280px
+		font-size: 16px
+		line-height: 20px
+		font-weight: 600
+		color: #000
+	&.active
+		.ordering
+			&-top
+				background: #212121
+				color: #fff
+				span
+					display: none
+				b
+					display: block
+
+@media only screen and (max-width : 1650px)
+	.header
+
+@media only screen and (max-width : 1450px)
+	.ordering
+		&-row
+			margin: 0 -7.5px
+		&-col
+			width: 20%!important
+			padding: 0 7.5px
+		&-img
+			img,svg
+				max-height: 100px
+
+@media only screen and (max-width : 1080px)
+	.ordering
+		&-content
+			padding: 30px 0 10px
+		&-row
+			flex-flow: row wrap
+			justify-content: center
+		&-col
+			width: 33.333%!important
+			padding-bottom: 30px
+
+@media only screen and (max-width : 768px)
+	.ordering
+		&-top
+			padding: 12px
+			font-size: 14px
+		&-row
+			justify-content: flex-start
+			align-items: flex-start
+		&-col
+			width: 50%!important
+		&-tit
+			font-size: 14px
+			left: 17px
+		&-img
+			img,svg
+				max-height: 70px

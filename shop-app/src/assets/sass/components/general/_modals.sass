@@ -1,0 +1,720 @@
+@import "vars"
+
+.fancybox-slide--html
+	padding: 10px
+	.fancybox-close-small
+		display: none
+		top: 30px
+		right: 40px
+		margin: 0
+		transform: none
+		opacity: 1
+		min-width: 31px
+		width: 31px
+		height: 31px
+		background-image: url("data:image/svg+xml,%3Csvg width='31' height='31' viewBox='0 0 31 31' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='2.58398' y='2.58594' width='25.8333' height='25.8333' rx='6.45833' stroke='%23212121' stroke-width='1.9375'/%3E%3Cpath d='M12.7602 18.2457L18.2402 12.7656' stroke='%23212121' stroke-width='1.9375' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M12.7602 12.7621L18.2402 18.2422' stroke='%23212121' stroke-width='1.9375' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A")
+		background-repeat: no-repeat
+		background-position: center
+		background-size: contain
+		svg,img
+			display: none
+
+.fancybox-bg
+	background: #000
+
+.fancybox-is-open .fancybox-bg
+	opacity: 0.4
+
+.fancybox-navigation .fancybox-button,.fancybox-infobar
+	display: none!important
+
+.modal
+	max-width: 518px
+	width: 100%
+	padding: 39px 34px
+	background: #F6F6F6
+	border: 1px solid rgba(255, 255, 255, 0.03)
+	border-radius: 12px
+	&-title
+		display: block
+		font-size: 24px
+		line-height: 32px
+		font-weight: bold
+		color: #212121
+		text-align: center
+		margin: 0 0 73px
+	.primary-btn
+		display: block
+		width: 100%
+		line-height: 24px
+	.border-btn
+		display: block
+		width: 100%
+		border-radius: 12px
+	&-buttons
+		.primary-btn
+			margin-bottom: 13px
+	&-registration
+		&-img
+			text-align: center
+			img,svg
+				margin: 0 auto
+		&-bottom
+			padding-top: 17px
+			.primary-btn
+				margin-bottom: 13px
+		&-time
+			display: block
+			width: 100%
+			text-align: center
+			margin-bottom: 13px
+			background: rgba(33, 33, 33, 0.1)
+			border-radius: 12px
+			padding: 25px 15px
+			font-size: 14px
+			line-height: 24px
+			font-weight: 600
+			color: #212121
+			letter-spacing: 0.28px
+	&-forgot
+		display: flex
+		flex-flow: row nowrap
+		align-items: center
+		justify-content: space-between
+		padding: 17px 0 36px
+		.checkbox
+			margin: 0
+	&-link
+		display: inline-block
+		font-size: 12px
+		line-height: 2
+		font-weight: 600
+		color: rgba(33, 33, 33, 0.51)
+		text-transform: uppercase
+		&:hover
+			color: $colorMain
+	&-btns
+		.primary-btn
+			margin-bottom: 13px
+	&-card
+		&-content
+			padding: 30px 26.5px
+			text-align: center
+			p
+				font-size: 14px
+				line-height: 17px
+				font-weight: 600
+				color: #000
+				opacity: 0.7
+				margin: 0 0 29px
+		&-title
+			display: block
+			font-size: 23px
+			line-height: 28px
+			font-weight: bold
+			color: #000
+			margin: 0 0 29px
+		&-buttons
+			display: flex
+			flex-flow: row nowrap
+			align-items: center
+			justify-content: space-between
+			padding: 0 24px
+			.modal
+				&-link
+					white-space: nowrap
+			.primary-btn
+				padding: 17px 40px
+				display: inline-block
+				width: auto
+	&-education
+		&-step
+			display: none
+			flex-flow: row nowrap
+			&.active
+				display: flex
+		&-info
+			min-height: 640px
+			min-width: 409px
+			width: 409px
+			padding: 45px 69px 180px 43px
+			position: relative
+		&-sub
+			display: block
+			font-size: 14px
+			line-height: 17px
+			font-weight: 600
+			color: #000
+			margin: 0 0 24px
+		&-title
+			display: block
+			font-size: 32px
+			line-height: 39px
+			font-weight: bold
+			color: #000
+			margin: 0
+		&-buttons
+			position: absolute
+			bottom: 0
+			left: 0
+			width: 100%
+			padding: 0 47px 57px
+			.primary-btn
+				font-size: 14px
+				line-height: 17px
+				padding: 21px 28px
+				display: inline-block
+				width: auto
+			.modal-link
+				margin-top: 34px
+		&-img
+			max-width: 430px
+			width: 100%
+			background: #5137C3
+			border-radius: 12px 0 0 12px
+			padding: 173px 44px 40px
+		&-st
+			display: inline-block
+			font-size: 14px
+			line-height: 17px
+			font-weight: 600
+			color: #fff
+			padding: 15px
+			background: #5137C3
+			border-radius: 31px
+			margin-bottom: 23px
+	&-certificate
+		.tab-list
+			display: flex
+			flex-flow: row nowrap
+			margin: 0 -1.5px
+			padding-bottom: 25px
+			text-align: center
+			li
+				width: 50%
+				padding: 0 1.5px
+				&:last-child a
+					border-radius: 0px 40px 40px 0px
+				a
+					display: flex
+					align-items: center
+					justify-content: center
+					height: 100%
+					width: 100%
+					font-size: 14px
+					line-height: 17px
+					font-weight: 600
+					color: #212121
+					padding: 19px
+					background: #F6F6F6
+					border-radius: 40px 0px 0px 40px
+					&.active
+						background: #212121
+						color: #fff
+		.tab
+			border-top: 1px solid rgba(33, 33, 33, 0.1)
+			padding-top: 25px
+		.input-block
+			margin-bottom: 25px
+			input
+				text-align: left
+				height: 60px
+				border: 1px solid rgba(0, 0, 0, 0.05)
+				background: #EDEDED
+				border-radius: 8px
+				padding: 18px
+				font-weight: 600
+				&::-webkit-input-placeholder
+					color: rgba(#212121, 1)
+				&:-moz-placeholder
+					color: rgba(#212121, 1)
+				&::-moz-placeholder
+					color: rgba(#212121, 1)
+				&:-ms-input-placeholder
+					color: rgba(#212121, 1)
+		.primary-btn
+			display: block
+			width: 100%
+			background: #5137C3
+	&-basket
+		&-title
+			display: block
+			max-width: 280px
+			font-size: 16px
+			line-height: 20px
+			font-weight: bold
+			letter-spacing: 0.288px
+			color: #000
+			margin: 0 0 21px
+			span
+				font-weight: 600
+		&-bl
+			display: flex
+			flex-flow: row nowrap
+			align-items: center
+			justify-content: center
+			background: #212121
+			border-radius: 11px
+			padding: 20px 15px
+			font-size: 14px
+			line-height: 17px
+			font-weight: 600
+			letter-spacing: 0.288px
+			color: #fff
+			margin-bottom: 21px
+			.hb-ico
+				margin-right: 10px
+		.input-block
+			border-top: 1px solid rgba(0, 0, 0, 0.1)
+			padding-top: 21px
+			margin-bottom: 21px
+			input
+				height: 73px
+				padding: 0 33px
+				font-weight: 600
+				font-size: 14px
+				text-align: left
+				&::-webkit-input-placeholder
+					color: rgba(#212121, 1)
+				&:-moz-placeholder
+					color: rgba(#212121, 1)
+				&::-moz-placeholder
+					color: rgba(#212121, 1)
+				&:-ms-input-placeholder
+					color: rgba(#212121, 1)
+		&-block
+			display: flex
+			flex-flow: row nowrap
+			align-items: center
+			justify-content: space-between
+			background: #5137C3
+			border-radius: 12px
+			font-size: 14px
+			line-height: 17px
+			font-weight: 600
+			color: #fff
+			letter-spacing: 0.288px
+			padding: 28px 33px
+			margin-bottom: 21px
+			span
+				display: block
+		.primary-btn
+			background: #FF5151
+			color: #fff
+			margin: 0
+	&-ticket
+		&-title
+			display: block
+			font-size: 20px
+			line-height: 1.2
+			font-weight: bold
+			color: #000
+			padding-bottom: 21.5px
+			margin: 0 0 24px
+			border-bottom: 1px solid rgba(#212121, 0.1)
+		&-bottom
+			display: flex
+			flex-flow: row nowrap
+			align-items: center
+			justify-content: space-between
+			padding-top: 24px
+			margin-top: 11px
+			border-top: 1px solid rgba(33, 33, 33, 0.1)
+			.primary-btn
+				max-width: 343px
+				background: #5137C3
+				padding: 22px 40px
+		&-file
+			display: flex
+			flex-flow: row nowrap
+			align-items: center
+			white-space: nowrap
+			position: relative
+			span
+				display: block
+				font-size: 14px
+				line-height: 17ppx
+				font-weight: 600
+				color: #000
+			input
+				position: absolute
+				top: 0
+				left: 0
+				width: 100%
+				height: 100%
+				opacity: 0
+				cursor: pointer
+				z-index: 20
+			.primary-btn
+				max-width: 343px
+				background: #212121
+				padding: 22px 23px
+				border-radius: 51px
+				margin-right: 22px
+		&-hr
+			display: block
+			width: 100%
+			height: 1px
+			background-color: rgba(33, 33, 33, 0.1)
+			margin: 24px 0
+		.input-block
+			margin-bottom: 13px
+			input,select
+				height: 62px
+				padding: 0 19px
+				text-align: left
+			input,textarea
+				&::-webkit-input-placeholder
+					color: rgba(#212121, 1)
+				&:-moz-placeholder
+					color: rgba(#212121, 1)
+				&::-moz-placeholder
+					color: rgba(#212121, 1)
+				&:-ms-input-placeholder
+					color: rgba(#212121, 1)
+			select
+				padding-right: 50px
+	&-search
+		display: flex
+		flex-flow: row nowrap
+		.input-block
+			width: 100%
+			margin: 0 15px 0 0
+			input
+				height: 60px
+				&::-webkit-input-placeholder
+					color: rgba(#212121, 1)
+				&:-moz-placeholder
+					color: rgba(#212121, 1)
+				&::-moz-placeholder
+					color: rgba(#212121, 1)
+				&:-ms-input-placeholder
+					color: rgba(#212121, 1)
+		.primary-btn
+			display: inline-block
+			width: auto
+			padding: 20px 61px
+			font-size: 16px
+			line-height: 20px
+	&-track
+		&-title
+			display: block
+			font-size: 23px
+			line-height: 28px
+			font-weight: bold
+			color: #000
+			margin: 0 0 29px
+		&-btn
+			.primary-btn
+				max-width: 306px
+				margin: 0 auto
+				font-size: 14px
+				line-height: 17px
+				padding: 17px
+	&-product
+		&-bl
+			background: rgba(255, 81, 81, 0.2)
+			border-radius: 10px
+			padding: 14px 17px
+			font-size: 12px
+			line-height: 15px
+			font-weight: 600
+			color: #000
+			margin-bottom: 30px
+		&-row
+			display: flex
+			flex-flow: row nowrap
+		&-img
+			min-width: 300px
+			width: 300px
+			img,svg
+				border-radius: 12px
+		&-info
+			width: 100%
+			padding-left: 30px
+		&-sub
+			display: block
+			font-size: 16px
+			line-height: 20px
+			font-weight: 500
+			opacity: 0.6
+			margin: 0 0 15px
+		&-tit
+			display: block
+			font-size: 24px
+			line-height: 29px
+			font-weight: 600
+			padding-bottom: 30px
+			border-bottom: 1px solid rgba(#212121, 0.1)
+			margin: 0 0 30px
+		&-block
+			padding-bottom: 30px
+		&-label
+			display: block
+			font-size: 16px
+			line-height: 20px
+			font-weight: 500
+			opacity: 0.6
+			margin: 0 0 15px
+		&-prices
+			display: flex
+			flex-flow: row nowrap
+			align-items: center
+			margin: 0 -18px 20px
+			b
+				display: block
+				padding: 0 18px
+				font-size: 21.7368px
+				line-height: 26px
+				font-weight: 600
+				color: #000
+				position: relative
+				&::after
+					content: ''
+					position: absolute
+					top: 50%
+					right: -0.5px
+					transform: translate(0,-50%)
+					width: 1px
+					height: 24px
+					background: rgba(#212121, 0.1)
+				span
+					font-weight: 500
+					opacity: 0.7
+					padding-right: 18px
+				&:last-child
+					&::after
+						display: none
+		.primary-btn
+			display: flex
+			flex-flow: row nowrap
+			align-items: center
+			justify-content: center
+			padding: 18px
+			img,svg
+				margin-left: 10px
+	&.modal-card
+		padding: 0
+		border: none
+		max-width: 407px
+	&.modal-education
+		padding: 0
+		border: none
+		max-width: 839px
+	&.modal-certificate
+		padding: 26px 22px
+		border-radius: 14px
+		border: none
+		max-width: 494px
+		background-color: #fff
+	&.modal-basket
+		max-width: 520px
+		background-color: #fff
+		padding: 40px
+		border: none
+	&.modal-ticket
+		max-width: 846px
+		padding: 33.5px 40px 32px
+		background-color: #fff
+		border: none
+		.fancybox-close-small
+			display: block
+	&.modal-add
+		max-width: 846px
+		padding: 33px 30px 30px
+		border: none
+		.fancybox-close-small
+			display: block
+			right: 30px
+	&.modal-track,&.modal-compilation
+		border: none
+		padding: 30px 26.5px
+		max-width: 407px
+		text-align: center
+		p
+			font-size: 14px
+			line-height: 17px
+			font-weight: 600
+			color: #000
+			opacity: 0.7
+			margin-bottom: 29px
+	&.modal-product
+		border: none
+		max-width: 846px
+		padding: 33px 30px 30px
+		.fancybox-close-small
+			display: block
+			right: 30px
+		.modal-ticket-title
+			font-weight: 600
+		.modal-search
+			margin-bottom: 30px
+			.primary-btn
+				min-width: 176px
+
+@media only screen and (max-width : 1450px)
+	.modal
+		padding: 24px
+		&-title
+			margin-bottom: 25px
+		&-education
+			&-info
+				min-height: 540px
+			&-img
+				padding: 123px 44px 40px
+
+@media only screen and (max-width : 768px)
+	.input-block
+		margin-bottom: 15px
+		input,select
+			height: 50px
+	.checkbox
+		margin-bottom: 20px
+		p
+			font-size: 11px
+			line-height: 1.3
+	.modal
+		padding: 24px 14px
+		.border-btn
+			line-height: 24px
+		&-title
+			font-size: 22px
+			line-height: 1.3
+		&-registration
+			&-time
+				padding: 11px 15px
+				font-size: 12px
+		&-forgot
+			padding: 5px 0 20px
+		&-card
+			&-content
+				padding: 25px 15px
+				p
+					margin-bottom: 20px
+			&-title
+				font-size: 22px
+				line-height: 1.3
+				margin-bottom: 15px
+			&-buttons
+				padding: 0
+				max-width: 300px
+				margin: 0 auto
+		&-education
+			&-info
+				min-width: auto
+				min-height: auto
+				padding: 25px 15px
+			&-buttons
+				position: relative
+				bottom: auto
+				left: auto
+				padding: 0
+				max-width: 200px
+				.modal-btn
+					margin-top: 15px
+			&-title
+				font-size: 22px
+				line-height: 1.3
+				margin-bottom: 25px
+			&-img
+				display: none
+		&-basket
+			&-block
+				padding: 19px 15px
+			.input-block
+				input
+					height: 56px
+					padding: 0 15px
+			&-bl
+				font-size: 12px
+				padding: 14px 15px
+		&-ticket
+			&-title
+				font-size: 18px
+			.input-block
+				input,select
+					height: 56px
+				textarea
+					height: 200px
+			&-bottom
+				display: block
+				.primary-btn
+					max-width: 100%
+			&-file
+				margin-bottom: 10px
+				max-width: 250px
+				.primary-btn
+					max-width: 182px
+		&-search
+			display: block
+			.primary-btn
+				max-width: 100%
+				width: 100%
+				margin-top: 13px
+		&-track
+			font-size: 20px
+			line-height: 1.3
+			margin-bottom: 20px
+		&-product
+			&-img
+				min-width: 200px
+				width: 200px
+			&-info
+				padding-left: 20px
+			&-sub
+				font-size: 14px
+				line-height: 1.2
+				margin-bottom: 10px
+			&-tit
+				font-size: 18px
+				line-height: 1.3
+				padding-bottom: 20px
+				margin-bottom: 20px
+			&-block
+				padding-bottom: 20px
+			&-label
+				font-size: 14px
+				margin-bottom: 10px
+			&-prices
+				margin: 0 -10px 20px
+				b
+					padding: 0 10px
+					font-size: 16px
+					line-height: 1.3
+					&::after
+						height: 20px
+					span
+						padding-right: 7px
+		&.modal-education
+			max-width: 460px
+		&.modal-certificate,&.modal-basket,&.modal-ticket,&.modal-add,&.modal-add,&.modal-track,.modal-compilation,&.modal-product
+			padding: 25px 15px
+		&.modal-ticket,&.modal-add,&.modal-product
+			.fancybox-close-small
+				top: 18px
+				right: 15px
+		&.modal-track,&.modal-compilation
+			p
+				margin-bottom: 20px
+	.sizes li div i
+		width: 34px
+		min-width: 34px
+		height: 34px
+		font-size: 16px
+	.colors
+		margin: 0 -4px
+		li
+			padding: 0 4px
+
+@media only screen and (max-width : 560px)
+	.modal
+		&-product
+			&-row
+				display: block
+			&-img
+				min-width: auto
+				width: 100%
+				margin-bottom: 30px
+			&-info
+				max-width: 100%
+				padding: 0

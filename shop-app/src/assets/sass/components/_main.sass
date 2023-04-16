@@ -1,0 +1,261 @@
+@import "vars"
+
+.main
+	margin-bottom: 100px
+	&-slider
+		position: relative
+	&-row
+		display: flex
+		flex-flow: row nowrap
+		align-items: flex-end
+		padding-bottom: 45px
+	&-info
+		min-width: 450px
+		width: 450px
+		padding-right: 40px
+	&-logo
+		display: flex
+		flex-flow: row nowrap
+		align-items: center
+		margin-bottom: 25px
+		&-img
+			min-width: 45px
+			width: 45px
+			img,svg
+				max-width: 45px
+		&-txt
+			display: block
+			font-size: 16px
+			line-height: 20px
+			font-weight: 600
+			color: #212121
+			padding-left: 20px
+			position: relative
+			&::after
+				content: ''
+				position: absolute
+				top: 50%
+				left: 9px
+				transform: translate(0,-50%)
+				width: 1px
+				height: 13px
+				background: #212121
+	&-title
+		display: block
+		font-size: 101px
+		line-height: 123px
+		font-weight: 800
+		color: #212121
+		margin: 0 0 26px
+	&-block
+		display: block
+		width: 254px
+		height: 128px
+		background-image: url("data:image/svg+xml,%3Csvg width='254' height='128' viewBox='0 0 254 128' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M226.9 0.459351C226.9 4.27451 223.807 7.3673 219.992 7.3673C216.176 7.3673 213.084 4.27451 213.084 0.459351L8.50209 0.459361C3.80652 0.459361 0 4.26587 0 8.96144V119.489C0 124.184 3.80651 127.991 8.50209 127.991H213.084C213.084 124.176 216.176 121.083 219.992 121.083C223.807 121.083 226.9 124.176 226.9 127.991H245.498C250.193 127.991 254 124.184 254 119.489V8.96145C254 4.26588 250.193 0.459361 245.498 0.459361L226.9 0.459351ZM219.5 9.45936V11.9594H220.5V9.45936H219.5ZM219.5 16.9594V21.9594H220.5V16.9594H219.5ZM219.5 26.9594V31.9594H220.5V26.9594H219.5ZM219.5 36.9594V41.9594H220.5V36.9594L219.5 36.9594ZM219.5 46.9594V51.9594H220.5V46.9594H219.5ZM219.5 56.9594V61.9594H220.5V56.9594H219.5ZM219.5 66.9594V71.9594L220.5 71.9594V66.9594H219.5ZM219.5 76.9594V81.9594H220.5V76.9594H219.5ZM219.5 86.9594V91.9594H220.5V86.9594H219.5ZM219.5 96.9594V101.959H220.5V96.9594H219.5ZM219.5 106.959V111.959H220.5V106.959H219.5ZM219.5 116.959V119.459H220.5V116.959H219.5Z' fill='%23212121'/%3E%3C/svg%3E%0A")
+		background-repeat: no-repeat
+		background-position: center
+		background-size: contain
+		padding: 28px 24px
+		margin-bottom: 36px
+		span,b
+			display: block
+			color: #fff
+		span
+			font-size: 14px
+			line-height: 11px
+			font-weight: 600
+			margin: 0 0 9px
+		b
+			font-size: 49.9498px
+			line-height: 61px
+			font-weight: 800
+			letter-spacing: 0.21em
+	&-img
+		width: 100%
+		height: 595px
+		background-repeat: no-repeat
+		background-position: center
+		background-size: cover
+	&-num
+		display: flex
+		flex-flow: row nowrap
+		align-items: center
+		margin-left: -2px
+		min-width: 48px
+		width: 48px
+		white-space: nowrap
+		font-size: 14px
+		line-height: 20px
+		font-weight: 500
+		color: #000
+		span
+			display: flex
+			flex-flow: row nowrap
+			align-items: center
+			padding-right: 8px
+			font-weight: 600
+		b
+			display: block
+			font-weight: 500
+			padding-left: 9px
+	&-bar
+		display: block
+		width: 100%
+		height: 2px
+		background: rgba(#212121, 0.1)
+		position: relative
+		i,span
+			position: absolute
+			top: 0
+			left: 0
+			height: 100%
+			background: #212121
+		&.run-animation
+			i,span
+				animation-name: countingBar
+				animation-duration: 7.5s
+				animation-timing-function: linear
+				animation-iteration-count: infinite
+	&-actions
+		display: flex
+		flex-flow: row nowrap
+		align-items: center
+		width: 100%
+		position: absolute
+		bottom: 0
+		left: 0
+		padding-left: 450px
+		.slider-arrows
+			min-width: 60px
+			width: 60px
+			padding-left: 11px
+	&-sl
+		display: none
+		.primary-btn
+			border: 1px solid transparent
+			padding: 24px 39.5px
+		&.active
+			display: block
+			&.main-sl-2
+				.primary-btn
+					background: none
+					border-color: #212121
+					color: #212121
+					&:hover
+						border-color: $colorMain
+						background-color: $colorMain
+						color: #fff
+				.border-btn
+					background-color: #212121
+					color: #fff
+					&:hover
+						border-color: $colorMain
+						background-color: $colorMain
+
+@keyframes countingBar
+	0%
+		width: 0%
+	100%
+		width: 100%
+
+@media only screen and (max-width : 1450px)
+	.main
+		&-title
+			font-size: 80px
+			line-height: 1.1
+
+@media only screen and (max-width : 1280px)
+	.main
+		&-img
+			height: 500px
+		&-info
+			min-width: 400px
+			width: 400px
+		&-title
+			font-size: 60px
+
+@media only screen and (max-width : 1080px)
+	.main
+		margin-bottom: 80px
+		&-info
+			min-width: 350px
+			width: 350px
+			.primary-btn
+				padding: 25px
+			.border-btn
+				padding: 24px
+		&-title
+			font-size: 50px
+
+@media only screen and (max-width : 768px)
+	.main
+		margin-bottom: 60px
+		&-row
+			flex-flow: row wrap
+		&-img
+			height: 400px
+			order: -1
+			margin-bottom: 25px
+		&-info
+			max-width: 100%
+			min-width: auto
+			width: 100%
+			.primary-btn
+				padding: 15px 24px
+			.border-btn
+				padding: 14px 23px
+		&-logo
+			margin-bottom: 15px
+			&-txt
+				font-size: 16px
+		&-title
+			font-size: 36px
+			margin-bottom: 25px
+		&-block
+			width: 200px
+			height: 100px
+			padding: 15px
+			margin-bottom: 20px
+			span
+				font-size: 12px
+				line-height: 2
+				margin-bottom: 4px
+			b
+				font-size: 32px
+				line-height: 1.4
+		&-actions
+			padding: 0
+
+@media only screen and (max-width : 560px)
+	.main
+		&-img
+			height: auto
+			padding-bottom: 44.73684210526316%
+			margin-bottom: 20px
+		&-logo
+			margin-bottom: 5px
+			&-img
+				min-width: 30px
+				width: 30px
+				img,svg
+					max-width: 14px
+					max-width: 30px
+			&-txt
+				font-size: 12px
+		&-title
+			font-size: 24px
+			line-height: 1.2
+			margin-bottom: 15px
+		&-block
+			display: none
+			width: 127px
+			height: 64px
+			padding: 14px 12px
+			margin-bottom: 15px
+			span
+				font-size: 10px
+				line-height: 1
+				margin-bottom: 3px
+			b
+				font-size: 22px
+				line-height: 1

@@ -1,0 +1,139 @@
+@import "vars"
+
+.cards
+	&.cards-second
+		margin: 0
+		padding: 0
+	.cloth
+		&-slider2
+			padding-bottom: 30px
+			.cloth-slide
+				width: 430px
+	&-block
+		margin-bottom: 100px
+		.cloth
+			&-wrapper
+				padding-right: 10px
+				display: flex
+				justify-content: flex-end
+				position: relative
+			&-top
+				padding-left: 310px
+				margin-bottom: 30px
+			&-actions
+				top: 76px
+				right: 0
+			&-picture
+				position: absolute
+				top: 0
+				left: 0
+				width: 1180px
+				padding: 0
+				img,svg
+					border-radius: 12px
+			&-info
+				padding: 62px 0 33px
+				min-width: 880px
+				width: 800px
+		&:last-child
+			.cloth
+				&-actions
+					right: auto
+					left: 531px
+				&-wrapper
+					display: block
+				&-top
+					padding-left: 0
+				&-info
+					order: -1
+				&-picture
+					left: auto
+					right: 0
+	&-bottom
+		position: relative
+		padding-bottom: 70px
+		&::after
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 200px
+			background: #F6F6F6
+			border-radius: 12px
+		.cloth
+			&-actions
+				top: 34.5px
+				right: 20px
+			&-top
+				border-radius: 12px 12px 0 0
+				padding: 20px 70px 26px 20px
+				margin: 0
+	&-slider
+		position: relative
+		z-index: 10
+		overflow: visible
+	&-pic
+		img,svg
+			border-radius: 12px
+	&-products
+		max-width: 1330px
+		margin: -102px auto 0
+		position: relative
+		z-index: 20
+
+@media only screen and (max-width : 1900px)
+	.cards
+		&-block
+			.cloth
+				&-picture
+					width: 880px
+					top: 50%
+					transform: translate(0,-50%)
+					margin-top: 40px
+				&-info
+					padding: 0
+				&-actions
+					top: 14.5px
+				&-wrapper
+					padding: 0
+
+@media only screen and (max-width : 1280px)
+	.cards
+		&-block
+			margin-bottom: 80px
+			.cloth
+				&-slider2
+					overflow: visible
+				&-top
+					padding-left: 0
+				&-info
+					min-width: auto
+					width: 100%
+			&:last-child
+				.cloth
+					&-actions
+						right: 0
+						left: auto
+
+@media only screen and (max-width : 768px)
+	.cards
+		&-block
+			margin-bottom: 60px
+			.cloth
+				&-top
+					margin-bottom: 25px
+		.cloth
+			&-slider2
+				.cloth
+					&-slide
+						width: 220px
+		&-products
+			padding: 30px 0 0
+			margin: 0
+		&-bottom
+			.cloth
+				&-top
+					padding: 20px 70px 20px 15px
+					.cloth-title
+						font-size: 17px

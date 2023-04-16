@@ -1,0 +1,127 @@
+@import "vars"
+
+.primary-btn,.border-btn,.account-btn,.basket-btn
+	display: inline-block
+	white-space: nowrap
+	cursor: pointer
+	position: relative
+	&:disabled
+		cursor: not-allowed
+
+.account-btn,.basket-btn
+	&::after
+		content: ''
+		position: absolute
+		top: 50%
+		transform: translate(0,-50%)
+		background-repeat: no-repeat
+		background-position: center
+		background-size: contain
+
+.account-btn
+	font-size: 14px
+	line-height: 24px
+	font-weight: 600
+	color: #212121
+	padding-right: 32px
+	&::after
+		right: 0
+		width: 24px
+		height: 24px
+		background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='4' cy='4' r='4' transform='matrix(-1 0 0 1 16 3)' stroke='%23212121' stroke-width='1.5'/%3E%3Cpath d='M5 16.9347C5 16.0743 5.54085 15.3068 6.35109 15.0175V15.0175C10.004 13.7128 13.996 13.7128 17.6489 15.0175V15.0175C18.4591 15.3068 19 16.0743 19 16.9347V18.2502C19 19.4376 17.9483 20.3498 16.7728 20.1818L15.8184 20.0455C13.2856 19.6837 10.7144 19.6837 8.18162 20.0455L7.22721 20.1818C6.0517 20.3498 5 19.4376 5 18.2502V16.9347Z' stroke='%23212121' stroke-width='1.5'/%3E%3C/svg%3E%0A")
+	&:hover
+		opacity: 0.8
+
+.basket-btn
+	background: #333
+	border-radius: 39px
+	padding: 21px 61px 21px 27px
+	font-size: 16px
+	line-height: 20px
+	font-weight: 600
+	color: #fff
+	&::after
+		right: 27px
+		width: 24px
+		height: 25px
+		background-image: url("data:image/svg+xml,%3Csvg width='24' height='25' viewBox='0 0 24 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 3.84766L3.04936 4.05753C3.91136 4.22993 4.55973 4.94498 4.6472 5.81968L4.8 7.34766M4.8 7.34766L5.7886 15.5859C5.90922 16.5911 6.76195 17.3477 7.77435 17.3477H16.7673C18.3733 17.3477 19.7733 16.2546 20.1628 14.6965L21.2855 10.2055C21.6485 8.75385 20.5505 7.34766 19.0542 7.34766H4.8Z' stroke='white' stroke-width='1.5' stroke-linecap='round'/%3E%3Ccircle cx='8.5' cy='20.8477' r='1.5' fill='white'/%3E%3Ccircle cx='17.5' cy='20.8477' r='1.5' fill='white'/%3E%3C/svg%3E%0A")
+	&:hover
+		background-color: $colorMain
+
+.primary-btn,.border-btn
+	text-align: center
+	font-size: 14px
+	line-height: 18px
+	font-weight: 600
+
+.primary-btn
+	color: #fff
+	padding: 25px 40.5px
+	background: #212121
+	border-radius: 10.7163px
+	&-f
+		display: flex
+		flex-flow: row nowrap
+		align-items: center
+		img,svg
+			margin-left: 10px
+	&:hover
+		background-color: $colorMain
+
+.border-btn
+	color: #212121
+	border: 1px solid #212121
+	//border-radius: 56px
+	padding: 24px 31.5px
+	&:hover
+		color: #fff
+		background-color: #212121
+
+.buttons
+	display: flex
+	flex-flow: row nowrap
+	align-items: center
+	margin: 0 -6px
+	.primary-btn,.border-btn
+		margin: 0 6px
+
+.play-btn
+	display: inline-block
+	font-size: 16px
+	line-height: 20px
+	font-weight: 600
+	color: #212121
+	padding: 26.5px 88.5px 26.5px 35.5px
+	background-color: #fff
+	border-radius: 40px
+	position: relative
+	&::after
+		content: ''
+		position: absolute
+		top: 50%
+		right: 35.5px
+		transform: translate(0,-50%)
+		width: 33px
+		height: 34px
+		background-image: url("data:image/svg+xml,%3Csvg width='33' height='34' viewBox='0 0 33 34' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0 16.5449C0 7.43222 7.3873 0.0449219 16.5 0.0449219C25.6127 0.0449219 33 7.43222 33 16.5449C33 25.6576 25.6127 33.0449 16.5 33.0449C7.3873 33.0449 0 25.6576 0 16.5449ZM12.2792 13.5601C12.2792 11.2921 14.8068 9.9394 16.6938 11.1974L21.171 14.1822C22.8569 15.3062 22.8569 17.7835 21.171 18.9075L16.6938 21.8923C14.8068 23.1503 12.2792 21.7975 12.2792 19.5296V13.5601Z' fill='%23212121'/%3E%3C/svg%3E%0A")
+		background-repeat: no-repeat
+		background-position: center
+		background-size: contain
+	&:hover
+		opacity: 0.7
+
+@media only screen and (max-width : 768px)
+	.primary-btn,.border-btn
+		font-size: 12px
+		line-height: 16px
+	.primary-btn
+		padding: 15px 24px
+	.border-btn
+		padding: 14px 23px
+	.play-btn
+		font-size: 16px
+		padding: 16px 50px 16px 20px
+		&::after
+			right: 15px
+			width: 28px
+			height: 28px

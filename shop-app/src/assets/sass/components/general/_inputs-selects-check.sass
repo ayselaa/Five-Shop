@@ -1,0 +1,241 @@
+@import "vars"
+
+.input-block
+	margin-bottom: 19px
+	input,select,textarea
+		display: block
+		width: 100%
+		height: 65px
+		border: none
+		padding: 15px
+		border-radius: 8px
+		background: rgba(33, 33, 33, 0.05)
+		font-size: 14px
+		font-weight: 500
+		color: #212121
+		text-align: center
+	select
+		background: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 16L11.2929 19.2929C11.6834 19.6834 12.3166 19.6834 12.7071 19.2929L16 16' stroke='%23212121' stroke-opacity='0.7' stroke-width='1.5' stroke-linecap='round'/%3E%3Cpath d='M12 19L12 5' stroke='%23212121' stroke-opacity='0.7' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E%0A") rgba(33, 33, 33, 0.05) no-repeat 97% center
+		background-size: 24px
+	textarea
+		height: 315px
+		padding: 19px 22px
+		text-align: left
+		resize: none
+	&-ico
+		position: relative
+		.hb-ico
+			position: absolute
+			top: 50%
+			left: 18px
+			transform: translate(0,-50%)
+			&::after
+				content: ''
+				position: absolute
+				top: 50%
+				right: -16px
+				transform: translate(0,-50%)
+				width: 1px
+				height: 14px
+				background: rgba(33, 33, 33, 0.1)
+		input
+			padding: 0 15px 0 73px
+			text-align: left
+
+.checkbox,.radio
+	display: block
+	position: relative
+	&-ico
+		display: block
+		position: absolute
+		top: 50%
+		left: 0
+		transform: translate(0,-50%)
+		transition: $transition
+	input
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		opacity: 0
+		cursor: pointer
+		z-index: 2
+
+.checkbox
+	padding: 0 0 0 30px
+	margin-bottom: 36px
+	&-ico
+		border: 2px solid #212121
+		width: 20px
+		height: 20px
+		border-radius: 4px
+		background-repeat: no-repeat
+		background-position: center
+		background-size: 12px
+	p
+		font-size: 12px
+		line-height: 2
+		letter-spacing: 0.24px
+		font-weight: 600
+		text-transform: uppercase
+		color: #212121
+	input
+		&:checked
+			& + .checkbox-ico
+				background-color: #212121
+				background-repeat: no-repeat
+				background-position: center
+				background-size: 14px
+				background-image: url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_607_13881)'%3E%3Cpath d='M11.4446 3.66797L5.33344 9.77908L2.55566 7.0013' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_607_13881'%3E%3Crect width='14' height='14' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A")
+
+.radio
+	padding: 0 0 0 26px
+	&-ico
+		width: 16px
+		height: 16px
+		border-radius: 50%
+		border: 2px solid #000
+		&::after
+			content: ''
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%,-50%)
+			width: 6px
+			height: 6px
+			border-radius: 50%
+			background: #000
+			transition: $transition
+			opacity: 0
+	input
+		&:checked
+			& + .radio-ico
+				&::after
+					opacity: 1
+
+.colors,.sizes
+	display: flex
+	flex-flow: row nowrap
+	li
+		div
+			position: relative
+			input
+				position: absolute
+				top: 0
+				left: 0
+				width: 100%
+				height: 100%
+				z-index: 10
+				cursor: pointer
+				opacity: 0
+
+.colors
+	margin: 0 -5.5px
+	li
+		padding: 0 5.5px
+		i
+			display: block
+			min-width: 32px
+			width: 32px
+			height: 32px
+			border-radius: 50%
+			&.colors-dark
+				background: #000
+			&.colors-gray
+				background: #AEAEAE
+			&.colors-red
+				background: #FF5151
+			&.colors-green
+				background: #9ACD90
+			&.colors-blue
+				background: #2B3F6C
+			&.colors-brown
+				background: #6C432B
+		input
+			&:checked
+				& + .colors-ico
+					background-color: transparent
+					padding: 3px
+					i
+						min-width: 22px
+						width: 22px
+						height: 22px
+						border-radius: 50%
+					&.colors-dark
+						border: 2px solid #000
+						i
+							background: #000
+					&.colors-gray
+						border: 2px solid #AEAEAE
+						i
+							background: #AEAEAE
+					&.colors-red
+						border: 2px solid #FF5151
+						i
+							background: #FF5151
+					&.colors-green
+						border: 2px solid #9ACD90
+						i
+							background: #9ACD90
+					&.colors-blue
+						border: 2px solid #2B3F6C
+						i
+							background: #2B3F6C
+					&.colors-brown
+						border: 2px solid #6C432B
+						i
+							background: #6C432B
+.sizes
+	margin: 0 -3px
+	li
+		padding: 0 3px
+		div
+			i
+				font-style: normal
+				display: flex
+				align-items: center
+				justify-content: center
+				width: 49px
+				min-width: 49px
+				height: 49px
+				text-align: center
+				font-size: 20px
+				line-height: 1.2
+				font-weight: 600
+				color: #212121
+				background: #EDEDED
+				border-radius: 8px
+				transition: background-color $transition, color $transition
+			input
+				&:checked
+					& + i
+						background: #212121
+						color: #fff
+
+.search
+	position: relative
+	.hb-ico
+		position: absolute
+		top: 50%
+		right: 20px
+		transform: translate(0,-50%)
+	input
+		display: block
+		width: 100%
+		height: 54px
+		border: 1px solid #212121
+		border-radius: 28px
+		padding: 0 50px 0 19px
+		font-size: 14px
+		font-weight: 600
+		color: #212121
+		background: none
+		&::-webkit-input-placeholder
+			color: rgba(#212121, 1)
+		&:-moz-placeholder
+			color: rgba(#212121, 1)
+		&::-moz-placeholder
+			color: rgba(#212121, 1)
+		&:-ms-input-placeholder
+			color: rgba(#212121, 1)

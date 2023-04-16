@@ -1,0 +1,110 @@
+@import "vars"
+
+.products
+	padding-bottom: 70px
+	&-row
+		display: flex
+		flex-flow: row wrap
+		margin: 0 -10px
+	&-col
+		width: 25%
+		padding: 0 10px 30px
+	&-slide
+		width: 430px
+		padding-bottom: 30px
+
+.product
+	position: relative
+	border-radius: 12px
+	overflow: hidden
+	&-info
+		position: absolute
+		bottom: 0
+		left: 0
+		width: 100%
+		background: #F6F6F6
+		padding: 24.5px 22px 24.5px 24px
+		z-index: 10
+	&-txt
+		display: block
+		font-size: 14px
+		line-height: 17px
+		font-weight: 500
+		color: #333
+		margin: 0 0 24px
+	&-name
+		display: block
+		font-size: 20px
+		line-height: 1.2
+		font-weight: bold
+		color: #333
+		text-transform: uppercase
+		margin: 0 0 22px
+		a
+			color: #333
+	&-bottom
+		display: flex
+		flex-flow: row nowrap
+		align-items: center
+		justify-content: space-between
+	&-price
+		display: block
+		font-size: 20px
+		line-height: 1.15
+		font-weight: 600
+		color: #333
+	
+@media only screen and (max-width : 1650px)
+	.products
+		&-slider
+			overflow: visible
+
+@media only screen and (max-width : 1450px)
+	.product
+		.basket-btn
+			padding: 14px 40px 14px 14px
+			font-size: 14px
+			&::after
+				right: 14px
+				width: 20px
+				height: 20px
+
+@media only screen and (max-width : 1280px)
+	.products
+		&-col
+			width: 50%
+		&-slide
+			width: 300px
+
+@media only screen and (max-width : 1080px)
+	.products
+		padding-bottom: 50px
+
+@media only screen and (max-width : 768px)
+	.products
+		padding-bottom: 30px
+		&-slide
+			width: 220px
+	.product
+		&-info
+			padding: 15px 12px
+		&-name
+			font-size: 15px
+			margin-bottom: 10px
+		&-txt
+			font-size: 13px
+			margin-bottom: 15px
+		&-price
+			font-size: 14px
+		.basket-btn
+			font-size: 12px
+			padding: 12px 34px 12px 12px
+			&::after
+				width: 18px
+				height: 18px
+				right: 12px
+
+@media only screen and (max-width : 560px)
+	.products
+		&-col
+			width: 100%

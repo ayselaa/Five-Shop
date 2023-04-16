@@ -1,0 +1,66 @@
+@import "vars"
+
+.stock
+	padding-bottom: 100px
+	&-row
+		display: flex
+		flex-flow: row nowrap
+		margin: 0 -10px
+	&-img
+		width: 100%
+		padding: 0 10px
+		&-wrap
+			display: block
+			height: 705px
+			background-repeat: no-repeat
+			background-position: center
+			background-size: cover
+			border-radius: 12px
+	&-block
+		display: flex
+		align-items: center
+		justify-content: center
+		min-width: 750px
+		width: 750px
+		background: #F6F6F6
+		border-radius: 12px
+		&-wrap
+			min-width: 430px
+			width: 430px
+
+@media only screen and (max-width : 1450px)
+	.stock
+		&-img
+			&-wrap
+				height: 500px
+		&-block
+			min-width: 550px
+			width: 550px
+
+@media only screen and (max-width : 1280px)
+	.stock
+		&-block
+			width: 350px
+			min-width: 350px
+			&-wrap
+				min-width: auto
+				width: 100%
+				padding: 0 30px
+
+@media only screen and (max-width : 1080px)
+	.stock
+		padding-bottom: 80px
+
+@media only screen and (max-width : 768px)
+	.stock
+		padding-bottom: 60px
+		&-row
+			margin: 0
+		&-img
+			display: none
+		&-block
+			min-width: auto
+			max-width: 100%
+			width: 100%
+			&-wrap
+				padding: 30px 15px

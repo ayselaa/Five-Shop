@@ -1,0 +1,333 @@
+@import "vars"
+
+.catalog
+	&-top
+		background: #212121
+		padding: 26px 0 27px
+		margin-bottom: 37px
+		.wrapper
+			display: flex
+			flex-flow: row nowrap
+			align-items: center
+			justify-content: space-between
+	&-title
+		display: block
+		font-size: 20px
+		line-height: 1.2
+		font-weight: 600
+		color: #fff
+		margin: 0
+	&-tags
+		display: flex
+		flex-flow: row nowrap
+		align-items: center
+		margin: 0 -7.5px
+		li
+			padding: 0 7.5px
+			a,span
+				display: block
+				font-size: 14px
+				line-height: 17px
+				font-weight: 600
+				color: #fff
+				padding: 15px
+				white-space: nowrap
+				border-radius: 39px
+				&.active
+					background: #F6F6F6
+					color: #212121
+	&-bg
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background-repeat: no-repeat
+		background-position: center
+		background-size: cover
+		&::after
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			background-color: rgba(33, 33, 33, 0.6)
+	.catalog
+		&-top
+			margin-bottom: 0
+	&-main
+		padding-bottom: 147px
+		.catalog
+			&-slide
+				padding: 146px 0 116px
+		.cloth
+			&-top
+				margin-bottom: 67px
+			&-title
+				color: #fff
+			&-actions
+				top: 160px
+				right: 70px
+				z-index: 50
+	&-middle
+		padding-bottom: 63px
+		.catalog-bg
+			left: 50%
+			transform: translate(-50%,0)
+			height: 147px
+			width: calc(100% - 140px)
+			border-radius: 12px
+			overflow: hidden
+		.cloth
+			&-top
+				padding: 35px 100px 33px 42px
+			&-title
+				color: #fff
+			&-actions
+				top: 49.5px
+				right: 112px
+				z-index: 50
+	&-bottom
+		padding-bottom: 60px
+		.cloth-actions
+			top: 14.5px
+			right: 43px
+	&-all
+		display: flex
+		flex-flow: row nowrap
+	&-img
+		width: 100%
+		padding-right: 128px
+	&-info
+		min-width: 772px
+		width: 772px
+	&-row
+		display: flex
+		flex-flow: row wrap
+		margin: 0 -11.5px
+	&-col
+		width: 33.333%
+		padding: 0 11.5px 40px
+	&-block
+		margin-bottom: 91px
+		.cloth-actions
+			top: 14.5px
+			right: 0
+		&-1
+			margin-bottom: 101px
+		.cloth-slider3
+			position: relative
+			z-index: 10
+			padding-bottom: 30px
+			margin-bottom: 30px
+		&-bg
+			display: block
+			width: 100%
+			height: 490px
+			border-radius: 12px
+			background-repeat: no-repeat
+			background-position: center
+			background-size: cover
+	&-item
+		margin-bottom: 100px
+		.cloth-actions
+			top: 14.5px
+			right: 0
+		&-row
+			display: flex
+			flex-flow: row nowrap
+		&-img
+			min-width: 700px
+			width: 700px
+			img,svg
+				border-radius: 12px
+		&-info
+			width: calc(100% - 700px)
+			padding-left: 60px
+		.cloth-slider4
+			overflow: visible
+			img,svg
+				border-radius: 12px
+
+@media only screen and (max-width : 1650px)
+	.catalog
+		&-middle
+			.catalog-bg
+				width: calc(100% - 100px)
+		&-img
+			padding-right: 40px
+		&-slider,&-slider2,&-slider3,&-slider4,&-slider5,&-slider6,&-slider7
+			overflow: visible
+		&-item
+			&-img
+				min-width: 600px
+				width: 600px
+			&-info
+				width: calc(100% - 600px)
+	.cloth
+		&-slider3
+			overflow: visible
+
+@media only screen and (max-width : 1450px)
+	.catalog
+		&-middle
+			.catalog-bg
+				width: calc(100% - 80px)
+		&-item
+			&-img
+				min-width: 500px
+				width: 500px
+			&-info
+				width: calc(100% - 500px)
+
+@media only screen and (max-width : 1280px)
+	.catalog
+		&-main
+			padding-bottom: 80px
+			.catalog-slide
+				padding: 60px 0
+			.cloth
+				&-top
+					margin-bottom: 30px
+				&-actions
+					top: 74.5px
+					right: 30px
+		&-middle
+			.cloth
+				&-actions
+					right: 30px
+		&-img
+			display: none
+		&-info
+			min-width: auto
+			width: 100%
+		&-bottom
+			.cloth
+				&-top
+					margin-bottom: 25px
+				&-actions
+					right: 0
+		&-block
+			margin-bottom: 80px
+		&-item
+			&-img
+				min-width: 350px
+				width: 350px
+			&-info
+				width: calc(100% - 350px)
+				padding-left: 30px
+
+@media only screen and (max-width : 1080px)
+	.catalog
+		&-middle
+			.catalog-bg
+				width: calc(100% - 60px)
+		&-item
+			margin-bottom: 80px
+			position: relative
+			.cloth-top
+				position: absolute
+				top: 100px
+				left: 0
+				padding-left: 330px
+				padding-right: 60px
+			.cloth-actions
+				top: 104.5px
+			&-row
+				display: block
+			&-img
+				min-width: 300px
+				width: 300px
+				margin-bottom: 30px
+			&-info
+				width: 100%
+				padding-left: 0
+
+@media only screen and (max-width : 768px)
+	.catalog
+		&-top
+			padding: 20px 0
+			.wrapper
+				display: block
+				text-align: center
+		&-tags
+			justify-content: center
+			padding-top: 20px
+			margin: 0 -5px
+			li
+				padding: 0 5px
+				a,span
+					font-size: 12px
+					line-height: 15px
+					padding: 10px
+		&-main
+			padding-bottom: 60px
+			.cloth
+				&-actions
+					right: 15px
+		&-middle
+			.catalog-bg
+				height: 120px
+				width: calc(100% - 30px)
+			.cloth
+				&-top
+					padding: 25px 15px
+				&-actions
+					top: 39.5px
+					right: 30px
+		&-bottom
+			padding-bottom: 45px
+		&-block
+			margin-bottom: 60px
+			&-1
+				.catalog
+					&-block
+						&-bg
+							padding-bottom: 27.528089887640448%
+							height: auto
+		&-item
+			margin-bottom: 60px
+			&-img
+				min-width: 270px
+				width: 270px
+			.cloth-top
+				padding-left: 300px
+
+@media only screen and (max-width : 560px)
+	.catalog
+		&-tags
+			margin: 0 -3.5px
+			li
+				padding: 0 3.5px
+				a,span
+					font-size: 11px
+					line-height: 14px
+					padding: 8px
+		&-row
+			margin: 0 -7.5px
+		&-col
+			width: 50%
+			padding: 0 7.5px 20px
+			.cloth-price
+				font-size: 14px
+				span
+					font-size: 11px
+		&-item
+			&-img
+				min-width: auto
+				width: 100%
+			.cloth-top
+				padding-left: 0
+				position: relative
+				top: auto
+				left: auto
+			.cloth-actions
+				top: auto
+				bottom: 420px
+			&-info
+				.cloth-slider4
+					overflow: visible
+					padding-bottom: 30px
+				.swiper-slide
+					width: 242px

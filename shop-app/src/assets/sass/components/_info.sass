@@ -1,0 +1,93 @@
+@import "vars"
+
+.info
+	background-repeat: no-repeat
+	background-position: center
+	background-size: cover
+	margin-bottom: 100px
+	.wrapper
+		height: 100vh
+		padding: 0 103.35px
+		display: flex
+		align-items: center
+		justify-content: flex-end
+	&-block
+		width: 589.65px
+		background: #F6F6F6
+		border-radius: 12px
+		padding: 60px 80px
+	&-descr
+		.primary-btn
+			padding: 25px 30px
+			font-size: 15px
+	&-sub
+		display: inline-block
+		background: rgba(51, 51, 51, 0.05)
+		border-radius: 36.2194px
+		margin-bottom: 30px
+		font-size: 11.8021px
+		line-height: 16px
+		font-weight: 600
+		color: #333
+		padding: 13.75px 15px 13.75px 46.33px
+		position: relative
+		&::after
+			content: ''
+			position: absolute
+			top: 50%
+			left: 15px
+			transform: translate(0,-50%)
+			width: 24px
+			height: 24px
+			background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.87365 3.52843C3.30565 3.52843 1.22386 5.61021 1.22386 8.17822L1.22386 9.37546C1.22386 9.9291 1.60983 10.3298 2.02733 10.4737C2.70007 10.7057 3.18167 11.3445 3.18167 12.0938C3.18167 12.8432 2.70007 13.482 2.02733 13.7139C1.60983 13.8579 1.22386 14.2586 1.22386 14.8122L1.22386 16.0094C1.22386 18.5774 3.30565 20.6592 5.87365 20.6592L17.6205 20.6592C20.1885 20.6592 22.2703 18.5774 22.2703 16.0094L22.2703 14.8122C22.2703 14.2586 21.8843 13.8579 21.4668 13.7139C20.7941 13.482 20.3125 12.8432 20.3125 12.0938C20.3125 11.3445 20.7941 10.7057 21.4668 10.4737C21.8843 10.3298 22.2703 9.9291 22.2703 9.37546L22.2703 8.17822C22.2703 5.61021 20.1885 3.52843 17.6205 3.52843L5.87365 3.52843ZM9.0439 10.4868C9.34649 10.7894 9.83709 10.7894 10.1397 10.4868C10.4423 10.1842 10.4423 9.69359 10.1397 9.391C9.83709 9.0884 9.34649 9.0884 9.0439 9.391C8.74131 9.69359 8.74131 10.1842 9.0439 10.4868ZM14.4497 14.7967C14.1471 15.0993 13.6565 15.0993 13.3539 14.7967C13.0513 14.4941 13.0513 14.0035 13.3539 13.7009C13.6565 13.3983 14.1471 13.3983 14.4497 13.7009C14.7523 14.0035 14.7523 14.4941 14.4497 14.7967ZM14.4576 10.4215C14.7444 10.1347 14.7444 9.66989 14.4576 9.38317C14.1709 9.09646 13.7061 9.09646 13.4194 9.38317L9.03621 13.7663C8.74949 14.053 8.74949 14.5179 9.03621 14.8046C9.32292 15.0913 9.78778 15.0913 10.0745 14.8046L14.4576 10.4215Z' fill='%23333333'/%3E%3C/svg%3E%0A")
+			background-repeat: no-repeat
+			background-position: center
+			background-size: contain
+	&-title
+		display: block
+		font-size: 32px
+		line-height: 35px
+		font-weight: bold
+		color: #333
+		margin: 0 0 30px
+
+@media only screen and (max-width : 1650px)
+	.info
+		.wrapper
+			padding: 0 50px
+	
+@media only screen and (max-width : 1450px)
+	.info
+		.wrapper
+			padding: 0 40px
+
+@media only screen and (max-width : 1280px)
+	.info
+		.wrapper
+			padding: 0 30px
+		&-title
+			font-size: 25px
+			line-height: 32px
+
+@media only screen and (max-width : 1080px)
+	.info
+		margin-bottom: 80px
+
+@media only screen and (max-width : 768px)
+	.info
+		margin-bottom: 60px
+		.wrapper
+			height: auto
+			min-height: 500px
+			justify-content: center
+			padding: 0 15px
+		&-block
+			max-width: 320px
+			width: 100%
+			padding: 25px 20px
+		&-title
+			font-size: 23px
+			line-height: 1.2
+		&-descr
+			.primary-btn
+				padding: 20px 24px

@@ -1,0 +1,304 @@
+@import "libs"
+@import "vars"
+
+@mixin font($fname, $fstyle, $fweight, $furl)
+	@font-face
+		font-family: $fname
+		font-style: $fstyle
+		font-weight: $fweight
+		src: url($furl) format('woff2')
+
+@include font('Neometric', normal, 700, '../fonts/Neometric-Bold.woff2')
+@include font('Neometric', normal, 600, '../fonts/Neometric-Medium.woff2')
+@include font('Neometric', normal, 500, '../fonts/Neometric-Regular.woff2')
+
+*::-webkit-input-placeholder
+	color: rgba(#212121, 0.7)
+
+*:-moz-placeholder
+	color: rgba(#212121, 0.7)
+
+*::-moz-placeholder
+	color: rgba(#212121, 0.7)
+
+*:-ms-input-placeholder
+	color: rgba(#212121, 0.7)
+
+* 
+	margin: 0
+	padding: 0
+	box-sizing: border-box
+	outline: none
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+
+a, a:hover, a:focus, a:active, a:visited
+	text-decoration: none
+	transition: $transition
+
+ul,ol 
+	list-style: none
+
+html,body
+	//height: 100%
+	overflow-x: hidden
+	&.scroll-hidden
+		overflow: hidden
+
+body
+	font-family: $Montserrat
+	font-size: 16px
+	line-height: 1.3
+	color: #212121
+	text-rendering: optimizeLegibility
+	-webkit-font-smoothing: antialiased
+	position: relative
+
+img,svg
+	display: block
+
+img
+	max-width: 100%
+	height: auto
+
+input,textarea,select,button
+	font-family: $Montserrat
+	appearance: none
+	box-shadow: none
+
+button
+	cursor: pointer
+	transition: $transition
+	border: none
+	background: transparent
+
+.wrapper
+	max-width: 1920px
+	margin: 0 auto
+	padding: 0 70px
+
+.swiper-container
+	width: 100%
+	height: 100%
+
+.swiper-button-prev,.swiper-button-next
+	display: block
+	width: 24px
+	height: 24px
+	padding: 0
+	margin: 0
+	position: relative
+	top: auto
+	left: auto
+	right: auto
+	bottom: auto
+	transform: none
+	background-image: url("data:image/svg+xml,%3Csvg width='24' height='25' viewBox='0 0 24 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16 16.8477L19.2929 13.5548C19.6834 13.1642 19.6834 12.5311 19.2929 12.1405L16 8.84766M19 12.8477L5 12.8477' stroke='%23212121' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E%0A")
+	background-repeat: no-repeat
+	background-position: center
+	background-size: contain
+	&::after
+		display: none
+	&.swiper-button-disabled
+		opacity: 0.6
+
+.swiper-button-prev
+	transform: rotate(180deg)
+
+.slider-arrows
+	display: flex
+	flex-flow: row nowrap
+	align-items: center
+	.swiper-button-next
+		margin-left: 1px
+
+.section
+	&-top
+		padding-bottom: 40px
+	&-sub
+		display: inline-block
+		font-size: 11px
+		line-height: 15px
+		font-weight: 600
+		color: #fff
+		padding: 10px 15px
+		letter-spacing: 0.6px
+		text-transform: uppercase
+		background: #212121
+		border-radius: 29px
+		margin-bottom: 15px
+	&-title
+		display: block
+		font-size: 25px
+		line-height: 32px
+		font-weight: bold
+		margin: 0
+	&-block
+		display: flex
+		flex-flow: row nowrap
+		align-items: center
+		justify-content: space-between
+		padding: 18px 29.5px
+		background: #F6F6F6
+		border-radius: 12px
+		margin-bottom: 20px
+		&.section-block-dark
+			background: #212121
+			.section
+				&-tit
+					color: #fff
+				&-btn
+					color: #000
+					background: #F6F6F6
+	&-tit
+		display: block
+		font-size: 16px
+		line-height: 20px
+		font-weight: 600
+	&-btn
+		display: inline-block
+		white-space: nowrap
+		font-size: 14px
+		line-height: 17px
+		font-weight: 600
+		color: #fff
+		padding: 15px 20px
+		background: #212121
+		border-radius: 25px
+		&:hover
+			opacity: 0.8
+
+.swiper-container-horizontal>.swiper-scrollbar
+	left: 0
+	width: 100%
+	bottom: 0
+	background: rgba(#212121, 0.1)
+	height: 2px
+
+.swiper-scrollbar-drag
+	background: #212121
+	opacity: 1
+
+.buy
+	&-wrap
+		position: fixed
+		bottom: 10px
+		right: 0
+		z-index: 500
+		width: 200px
+		height: 200px
+		&:hover .buy-btn
+			transform: rotate(0) translate(0,0)
+			border-radius: 8px 0px 0px 8px
+	&-btn
+		display: inline-block
+		white-space: nowrap
+		padding: 22px 47.5px 22px 86.5px
+		font-size: 17.6244px
+		line-height: 21px
+		font-weight: 600
+		color: #212121
+		background: #9ACD90
+		border-radius: 0 0px 0px 8px
+		transform: rotate(90deg) translate(67px,-68px)
+		&::after
+			content: ''
+			position: absolute
+			top: 50%
+			left: 47.5px
+			transform: translate(0,-50%)
+			width: 24px
+			height: 24px
+			background-image: url("data:image/svg+xml,%3Csvg width='25' height='24' viewBox='0 0 25 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M1.76471 2.85306C1.84594 2.44689 2.24106 2.18348 2.64723 2.26471L3.69659 2.47458C4.88184 2.71163 5.77335 3.69482 5.89362 4.89754L5.97889 5.75014H19.5544C21.5386 5.75014 22.9945 7.61488 22.5133 9.53988L21.3905 14.0309C20.9175 15.9229 19.2176 17.2501 17.2674 17.2501H8.27449C6.88244 17.2501 5.70994 16.2099 5.54408 14.8278L4.5546 6.58215L4.40107 5.0468C4.3464 4.50011 3.94117 4.0532 3.40242 3.94545L2.35306 3.73558C1.94689 3.65435 1.68348 3.25923 1.76471 2.85306ZM9.5 12.75C9.08579 12.75 8.75 13.0858 8.75 13.5C8.75 13.9142 9.08579 14.25 9.5 14.25H13.5C13.9142 14.25 14.25 13.9142 14.25 13.5C14.25 13.0858 13.9142 12.75 13.5 12.75H9.5Z' fill='%23212121'/%3E%3Ccircle cx='9' cy='20' r='1.5' fill='%23212121'/%3E%3Ccircle cx='18' cy='20' r='1.5' fill='%23212121'/%3E%3C/svg%3E%0A")
+			background-repeat: no-repeat
+			background-position: center
+			background-size: contain
+
+@media only screen and (max-width : 1650px)
+	.wrapper
+		padding: 0 50px
+	
+@media only screen and (max-width : 1450px)
+	.wrapper
+		padding: 0 40px
+
+@media only screen and (max-width : 1280px)
+	body
+		padding-top: 80px
+
+@media only screen and (max-width : 1080px)
+	.wrapper
+		padding: 0 30px
+
+@media only screen and (max-width : 768px)
+	body
+		padding-top: 60px
+	.wrapper
+		padding: 0 15px
+	.section
+		&-top
+			padding-bottom: 30px
+		&-title
+			font-size: 23px
+			line-height: 1.2
+		&-block
+			padding: 14px 15px
+	.buy
+		&-wrap
+			width: 107px
+			height: 107px
+		&-btn
+			font-size: 14px
+			line-height: 1
+			padding: 10px 15px 10px 40px
+			transform: rotate(90deg) translate(37px,-38px)
+			&::after
+				width: 20px
+				height: 20px
+				left: 10px
+
+@media only screen and (max-width : 560px)
+	.section
+		&-block
+			display: block
+			text-align: center
+		&-sub
+			font-size: 10px
+			line-height: 14px
+			padding: 8px 14px
+			margin-bottom: 8px
+		&-top
+			padding-bottom: 24px
+		&-tit
+			margin-bottom: 15px
+
+@import "components/general/icons"
+@import "components/general/buttons"
+@import "components/general/inputs-selects-check"
+@import "components/header"
+@import "components/ordering"
+@import "components/main"
+@import "components/brands"
+@import "components/stock"
+@import "components/products"
+@import "components/info"
+@import "components/popular"
+@import "components/cloth"
+@import "components/universal"
+@import "components/review"
+@import "components/advantages"
+@import "components/footer"
+@import "components/faq"
+@import "components/payment"
+@import "components/basket"
+@import "components/certificate"
+@import "components/catalog"
+@import "components/card"
+@import "components/cabinet"
+@import "components/general/modals"
+@import "components/sitemap"
+
+.tab
+	display: none
+	&.tab-active
+		display: block
+		

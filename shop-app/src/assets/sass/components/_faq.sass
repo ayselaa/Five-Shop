@@ -1,0 +1,154 @@
+@import "vars"
+
+.faq
+	&-top
+		padding: 53.5px 0 44.5px
+		background: #212121
+		text-align: center
+		ul
+			display: flex
+			flex-flow: row wrap
+			justify-content: center
+			margin: 0 -4.5px
+			li
+				padding: 0 4.5px 9px
+				a
+					display: inline-block
+					font-size: 14px
+					line-height: 18px
+					font-weight: 600
+					color: rgba(255, 255, 255, 0.7)
+					background: rgba(255, 255, 255, 0.1)
+					border-radius: 12px
+					padding: 15px
+					&.active
+						background-color: #fff
+						color: #212121
+	&-sub
+		display: inline-block
+		font-size: 11.767px
+		line-height: 18px
+		font-weight: 600
+		color: #fff
+		background: #5137C3
+		border-radius: 33px
+		padding: 10px 29px
+		margin: 0 0 5px
+	&-title
+		display: block
+		font-size: 35.3011px
+		line-height: 44px
+		font-weight: 600
+		color: #fff
+		padding-bottom: 19px
+		margin: 0 0 18px
+		position: relative
+		&::after
+			content: ''
+			position: absolute
+			bottom: 0
+			left: 50%
+			transform: translate(-50%,0)
+			width: 524px
+			height: 1px
+			background-color: rgba(217, 217, 217, 0.05)
+	&-content
+		padding: 79px 0 56px
+	&-block
+		border-bottom: 1px solid rgba(0, 0, 0, 0.1)
+		margin-bottom: 40px
+		&:last-child
+			margin-bottom: 0
+			border: none
+	&-subtitle
+		display: block
+		font-size: 24px
+		line-height: 29px
+		font-weight: 800
+		color: #212121
+		margin: 0 0 40px
+	&-accordeon
+		padding: 40px 30px
+		background: #F6F6F6
+		border-radius: 12px
+		margin-bottom: 40px
+		&-top
+			display: block
+			font-size: 20px
+			line-height: 1
+			font-weight: bold
+			letter-spacing: 0.126px
+			color: #212121
+			padding-bottom: 25px
+			border-bottom: 1px solid rgba(33, 33, 33, 0.05)
+		&-btn
+			margin-top: 25px
+			display: block
+			width: 100%
+			background: rgba(33, 33, 33, 0.05)
+			border-radius: 12px
+			padding: 15px
+			text-align: center
+			font-size: 14px
+			line-height: 20px
+			letter-spacing: 0.126px
+			font-weight: 600
+			color: rgba(33, 33, 33, 0.7)
+			cursor: pointer
+			transition: color $transition, background $transition
+			&.active
+				background: #212121
+				color: #fff
+		&-content
+			display: none
+			padding: 25px 0 0
+			ul,ol,p
+				padding-left: 24px
+				font-size: 16px
+				line-height: 28.5px
+				color: rgba(#212121, 0.7)
+				letter-spacing: 0.126px
+			p
+				padding: 0
+			ol
+				list-style: auto
+			ul
+				list-style: disc
+
+@media only screen and (max-width : 1650px)
+	.faq
+		&-top
+			padding: 50px 0 41px
+		&-content
+			padding: 50px 0 25px
+
+@media only screen and (max-width : 768px)
+	.faq
+		&-top
+			padding: 40px 0 31px
+			ul
+				li
+					a
+						padding: 10px
+		&-sub
+			margin-bottom: 10px
+		&-title
+			font-size: 27px
+			line-height: 1.3
+		&-block
+			margin-bottom: 25px
+		&-subtitle
+			font-size: 21px
+			line-height: 1.3
+			margin-bottom: 20px
+		&-accordeon
+			padding: 20px 15px
+			margin-bottom: 25px
+			&-top
+				font-size: 18px
+				padding-bottom: 20px
+			&-btn
+				margin-top: 20px
+			&-content
+				ul,ol,p
+					font-size: 14px

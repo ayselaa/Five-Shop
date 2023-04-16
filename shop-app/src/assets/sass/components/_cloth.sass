@@ -1,0 +1,187 @@
+@import "vars"
+
+.cloth
+	padding-bottom: 98px
+	.wrapper
+		padding: 0 35px
+	&-wrapper
+		display: flex
+		flex-flow: row nowrap
+	&-picture
+		width: 100%
+		padding-right: 75px
+		img,svg
+			border-radius: 0px 15px 15px 0px
+	&-info
+		height: 100%
+		padding-top: 81px
+		min-width: 772px
+		width: 772px
+	&-top
+		padding-right: 100px
+		position: relative
+		margin-bottom: 40px
+	&-subs
+		display: flex
+		flex-flow: row wrap
+		margin: 0 -6px
+		.cloth-sub
+			margin: 0 6px 12px
+	&-sub
+		display: inline-block
+		font-size: 11px
+		line-height: 15px
+		letter-spacing: 0.6px
+		font-weight: 600
+		text-transform: uppercase
+		color: #fff
+		padding: 10px 15px
+		background: $colorMain
+		border-radius: 29px
+		margin-bottom: 12px
+	&-title
+		display: block
+		font-size: 25px
+		line-height: 32px
+		font-weight: 600
+		color: #333
+		margin: 0
+	&-actions
+		position: absolute
+		top: 97px
+		right: 44px
+		text-align: right
+		.slider-arrows
+			margin-bottom: 5px
+		&-white
+			.swiper-button-prev,.swiper-button-next
+				background-image: url("data:image/svg+xml,%3Csvg width='24' height='25' viewBox='0 0 24 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16 16.5L19.2929 13.2071C19.6834 12.8166 19.6834 12.1834 19.2929 11.7929L16 8.5M19 12.5L5 12.5' stroke='white' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E%0A")
+			.cloth-num
+				color: rgba(#fff, 0.7)
+				span,b
+					color: #fff
+	&-num
+		display: block
+		font-size: 12px
+		line-height: 21px
+		font-weight: 600
+		color: #898686
+		text-align: center
+		b
+			display: inline-block
+			padding: 0 7px 0 5px
+			font-weight: 600
+		span
+			display: inline-block
+			color: #5A5757
+	&-slider
+		padding-bottom: 32px
+	&-slide
+		width: 242px
+		img,svg
+			border-radius: 12px
+	&-img
+		margin-bottom: 20px
+	&-tit
+		display: block
+		font-size: 20px
+		line-height: 1.2
+		font-weight: bold
+		color: #333
+		text-transform: uppercase
+		margin: 0 0 20px
+		a
+			color: #333
+	&-name
+		display: block
+		font-size: 16px
+		line-height: 20px
+		font-weight: 500
+		color: #616161
+		margin: 0 0 20px
+		a
+			color: #616161
+	&-price
+		display: flex
+		flex-flow: row nowrap
+		align-items: center
+		font-size: 20px
+		line-height: 1.2
+		font-weight: 600
+		color: #FF5151
+		span
+			display: inline-block
+			padding-left: 15px
+			font-size: 14px
+			line-height: 17px
+			font-weight: 600
+			color: #616161
+			text-decoration-line: line-through
+	
+@media only screen and (max-width : 1650px)
+	.cloth
+		&-info
+			padding-top: 0
+		&-actions
+			top: 16px
+		&-main,&-main2
+			overflow: visible
+
+@media only screen and (max-width : 1280px)
+	.cloth
+		&-picture
+			display: none
+		&-info
+			min-width: auto
+			width: 100%
+		&-actions
+			right: 0
+
+@media only screen and (max-width : 1080px)
+	.cloth
+		padding-bottom: 80px
+		.wrapper
+			padding: 0 30px
+		&-slider,&-slider2
+			overflow: visible
+
+@media only screen and (max-width : 768px)
+	.cloth
+		padding-bottom: 60px
+		.wrapper
+			padding: 0 15px
+		&-top
+			padding-right: 60px
+			margin-bottom: 24px
+		&-title
+			font-size: 23px
+			line-height: 1.2
+		&-slider,&-slider2
+			padding-bottom: 30px
+		&-slide
+			width: 220px
+		&-img
+			margin-bottom: 15px
+		&-tit
+			font-size: 15px
+			line-height: 1.2
+			margin-bottom: 10px
+		&-name
+			font-size: 13px
+			line-height: 17px
+			margin-bottom: 10px
+		&-price
+			font-size: 17px
+			span
+				font-size: 13px
+				padding-left: 10px
+		&-subs
+			margin: 0 -3px
+			.cloth
+				&-sub
+					margin: 0 3px 12px
+		&-sub
+			font-size: 10px
+			line-height: 14px
+			padding: 8px
+			

@@ -1,0 +1,54 @@
+@import "vars"
+
+.universal
+	padding-bottom: 68px
+	.section-block
+		margin-bottom: 40px
+	&-slider
+		padding-bottom: 32px
+	&-slide
+		width: 280px
+	.product
+		&-img
+			img,svg
+				border-radius: 12px
+		&-info
+			position: relative
+			background: none
+			padding: 18.63px 27.43px
+		&-name
+			font-size: 13.0233px
+			line-height: 16px
+			margin-bottom: 9px
+		&-txt
+			margin-bottom: 20px
+		&-bottom
+			.basket-btn
+				font-size: 10.4186px
+				line-height: 13px
+				padding: 12.37px 17.58px
+				&::after
+					display: none
+		&-price
+			font-size: 13.0233px
+			line-height: 15px
+
+@media only screen and (max-width : 1080px)
+	.universal
+		padding-bottom: 80px
+		&-slider
+			overflow: visible
+			padding-bottom: 22px
+
+@media only screen and (max-width : 768px)
+	.universal
+		padding-bottom: 60px
+		.section-block
+			margin-bottom: 30px
+		&-slide
+			width: 220px
+		.product
+			&-info
+				padding: 15px 12px
+			&-txt
+				margin-bottom: 15px

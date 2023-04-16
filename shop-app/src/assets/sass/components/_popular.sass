@@ -1,0 +1,87 @@
+@import "vars"
+
+.popular
+	padding-bottom: 69.5px
+	&-row
+		display: flex
+		flex-flow: row wrap
+		margin: 0 -10px
+	&-col
+		width: 33.333%
+		padding: 0 10px 30px
+		img,svg
+			border-radius: 12px
+	&-slide
+		width: 580px
+		padding-bottom: 30px
+		img,svg
+			border-radius: 12px
+	&-wrap
+		position: relative
+	&-block
+		position: absolute
+		bottom: 0
+		left: 0
+		width: 100%
+		padding: 33px 40px
+		z-index: 10
+	&-link
+		display: block
+		background: #F6F6F6
+		border-radius: 55px
+		padding: 18px 60px 18px 28px
+		font-size: 16px
+		line-height: 2
+		font-weight: 600
+		color: #212121
+		position: relative
+		&::after
+			content: ''
+			position: absolute
+			top: 50%
+			right: 28px
+			transform: translate(0,-50%)
+			width: 25px
+			height: 25px
+			background-image: url("data:image/svg+xml,%3Csvg width='25' height='25' viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.5 15.8477L15.7929 13.5548C16.1834 13.1642 16.1834 12.5311 15.7929 12.1405L13.5 9.84766M15.5 12.8477L8.5 12.8477M12.5 22.8477C18.0228 22.8477 22.5 18.3705 22.5 12.8477C22.5 7.32481 18.0228 2.84766 12.5 2.84766C6.97715 2.84766 2.5 7.32481 2.5 12.8477C2.5 18.3705 6.97715 22.8477 12.5 22.8477Z' stroke='%23212121' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E%0A")
+			background-repeat: no-repeat
+			background-position: center
+			background-size: contain
+	
+@media only screen and (max-width : 1650px)
+	.popular
+		&-slider
+			overflow: visible
+
+@media only screen and (max-width : 1280px)
+	.popular
+		&-slide
+			width: 400px
+
+@media only screen and (max-width : 1080px)
+	.popular
+		padding-bottom: 80px
+		&-col
+			width: 50%
+
+@media only screen and (max-width : 768px)
+	.popular
+		padding-bottom: 60px
+		&-col
+			width: 100%
+		&-slide
+			width: 260px
+		&-block
+			padding: 15px
+		&-link
+			padding: 12px 60px 12px 15px
+			font-size: 14px
+			line-height: 1.5
+			&::after
+				right: 15px
+		
+@media only screen and (max-width : 560px)
+	.popular
+		&-slide
+			width: 220px
+
