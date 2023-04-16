@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect} from "react";
 /* Ordering Images Start */
 import OrderingSvg1 from "../../../../../assets/img/ordering-1.svg";
 import OrderingSvg2 from "../../../../../assets/img/ordering-2.svg";
@@ -22,7 +22,13 @@ import OrderingTop from "./Elements/OrderingTop";
 import OrderingImage from "./UI/OrderingImage";
 /* Ordering Elements End */
 
+import $ from "jquery"
+
 const Ordering = (props) => {
+
+  useEffect(() => {
+  }, []);
+
   return (
     <OrderingSection>
       <OrderingTop />
@@ -75,6 +81,8 @@ const Ordering = (props) => {
           </OrderingRow>
         </Wrapper>
       </OrderingContent>
+      <script src="../../../../../assets/js/scripts.js"></script>
+      <script src="../../../../../assets/js/common.js"></script>
     </OrderingSection>
   );
 };
