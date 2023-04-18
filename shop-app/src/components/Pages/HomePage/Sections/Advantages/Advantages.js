@@ -1,5 +1,6 @@
 import React from 'react'
 import {Link} from "react-router-dom"
+import Img1 from "../../../../../assets/img/ico-1.svg"
 
 const Advantages = () => {
   return (
@@ -10,7 +11,7 @@ const Advantages = () => {
 				<div className="advantages-row">
 					<div className="advantages-col">
 						<div className="advantages-wrap">
-							<div className="advantages-ico"><img src="img/ico-1.svg" alt=""/></div>
+							<div className="advantages-ico"><img src={Img1} alt=""/></div>
 							<div className="advantages-info">
 								<span className="advantages-tit">повернення товарів</span>
 								<span className="advantages-txt">Протягом 14 днів</span>
@@ -19,7 +20,7 @@ const Advantages = () => {
 					</div>
 					<div className="advantages-col">
 						<div className="advantages-wrap">
-							<div className="advantages-ico"><img src="img/ico-1.svg" alt=""/></div>
+						<div className="advantages-ico"><img src={Img1} alt=""/></div>
 							<div className="advantages-info">
 								<span className="advantages-tit">повернення товарів</span>
 								<span className="advantages-txt">Протягом 14 днів</span>
@@ -28,7 +29,7 @@ const Advantages = () => {
 					</div>
 					<div className="advantages-col">
 						<div className="advantages-wrap">
-							<div className="advantages-ico"><img src="img/ico-1.svg" alt=""/></div>
+						<div className="advantages-ico"><img src={Img1} alt=""/></div>
 							<div className="advantages-info">
 								<span className="advantages-tit">повернення товарів</span>
 								<span className="advantages-txt">Протягом 14 днів</span>
@@ -37,7 +38,7 @@ const Advantages = () => {
 					</div>
 					<div className="advantages-col">
 						<div className="advantages-wrap">
-							<div className="advantages-ico"><img src="img/ico-1.svg" alt=""/></div>
+						<div className="advantages-ico"><img src={Img1} alt=""/></div>
 							<div className="advantages-info">
 								<span className="advantages-tit">повернення товарів</span>
 								<span className="advantages-txt">Протягом 14 днів</span>

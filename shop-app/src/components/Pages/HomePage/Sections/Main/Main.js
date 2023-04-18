@@ -1,140 +1,163 @@
 import React from "react";
-
-/* Import Slide Images Start */
-import MainImgWeb1 from "./UI/MainImgWeb1";
-import MainImgWeb5 from "./UI/MainImgWeb5";
-/* Import Slide Images End */
-
-/* Import UI Start */
-import Wrapper from "./UI/Wrapper";
-import MainSection from "./UI/MainSection";
-import MainSlideAndSwipperSlide from "./UI/MainSlideAndSwipperSlide";
-import MainRow from "./UI/MainRow";
-import MainInfo from "./UI/MainInfo";
-import MainLogo from "./UI/MainLogo";
-import MainLogoImg from "./UI/MainLogoImg";
-/* Import UI End */
-
-/*Import Elements Start */
-import MainActions from "./Elements/MainActions";
-import SwipperWrapper from "./UI/SwipperWrapper";
-import Buttons from "./Elements/Buttons";
-import MainBlock from "./Elements/MainBlock";
-import MainLogoText from "./Elements/MainLogoText";
-import MainTitle from "./Elements/MainTitle";
-/*Import Elements End */
-
+import Main1 from "../../../../../assets/img/main-1.svg"
+import Main1Webp from "../../../../../assets/img/img-1.webp"
+import Main1Webp5 from "../../../../../assets/img/img-5.webp"
+import { Link } from "react-router-dom";
+// style={{ backgroundImage: `url(${ImageWebp1})` }}
 const Main = () => {
   return (
-    <MainSection>
-      <Wrapper>
-        <div id="main-sl-1" className="main-sl main-sl-1 active">
-          <div className="main-slider swiper-container" id="swiper1">
-            <SwipperWrapper>
-                
-              <MainSlideAndSwipperSlide>
-                <MainRow>
-                  <MainInfo>
-                    <MainLogo>
-                      <MainLogoImg />
-                      <MainLogoText />
-                    </MainLogo>
-                    <MainTitle />
-                    <MainBlock />
-                    <Buttons />
-                  </MainInfo>
-                  <MainImgWeb1 />
-                </MainRow>
-              </MainSlideAndSwipperSlide>
-
-              <MainSlideAndSwipperSlide>
-                <MainRow>
-                  <MainInfo>
-                    <MainLogo>
-                      <MainLogoImg />
-                      <MainLogoText />
-                    </MainLogo>
-                    <MainTitle />
-                    <MainBlock />
-                    <Buttons />
-                  </MainInfo>
-                  <MainImgWeb1 />
-                </MainRow>
-              </MainSlideAndSwipperSlide>
-
-              <MainSlideAndSwipperSlide>
-                <MainRow>
-                  <MainInfo>
-                    <MainLogo>
-                      <MainLogoImg />
-                      <MainLogoText />
-                    </MainLogo>
-                    <MainTitle />
-                    <MainBlock />
-                    <Buttons />
-                  </MainInfo>
-                  <MainImgWeb1 />
-                </MainRow>
-              </MainSlideAndSwipperSlide>
-            </SwipperWrapper>
-            <MainActions />
-          </div>
-        </div>
-        <div id="main-sl-2" className="main-sl main-sl-2">
-          <div className="main-slider swiper-container" id="swiper2">
-            <SwipperWrapper>
-
-              <MainSlideAndSwipperSlide>
-                <MainRow>
-                  <MainInfo>
-                    <MainLogo>
-                      <MainLogoImg />
-                      <MainLogoText />
-                    </MainLogo>
-                    <MainTitle />
-                    <MainBlock />
-                    <Buttons />
-                  </MainInfo>
-                  <MainImgWeb5 />
-                </MainRow>
-              </MainSlideAndSwipperSlide>
-
-              <MainSlideAndSwipperSlide>
-                <MainRow>
-                  <MainInfo>
-                    <MainLogo>
-                      <MainLogoImg />
-                      <MainLogoText />
-                    </MainLogo>
-                    <MainTitle />
-                    <MainBlock />
-                    <Buttons />
-                  </MainInfo>
-                  <MainImgWeb5 />
-                </MainRow>
-              </MainSlideAndSwipperSlide>
-
-              <MainSlideAndSwipperSlide>
-                <MainRow>
-                  <MainInfo>
-                    <MainLogo>
-                      <MainLogoImg />
-                      <MainLogoText />
-                    </MainLogo>
-                    <MainTitle />
-                    <MainBlock />
-                    <Buttons />
-                  </MainInfo>
-                  <MainImgWeb5 />
-                </MainRow>
-              </MainSlideAndSwipperSlide>
-
-            </SwipperWrapper>
-            <MainActions />
-          </div>
-        </div>
-      </Wrapper>
-    </MainSection>
+    <section className="main">
+		<div className="wrapper">
+			<div id="main-sl-1" className="main-sl main-sl-1 active">
+				<div className="main-slider swiper-container" id="swiper1">
+					<div className="swiper-wrapper">
+						<div className="main-slide swiper-slide">
+							<div className="main-row">
+								<div className="main-info">
+									<div className="main-logo">
+										<div className="main-logo-img"><img src={Main1} alt=""/></div>
+										<span className="main-logo-txt">NIKE</span>
+									</div>
+									<h2 className="main-title">NIKE TEACH</h2>
+									<Link className="main-block" to="#modal-discount">
+										<span>СКИДКА</span>
+										<b>40%</b>
+									</Link>
+									<div className="buttons">
+										<Link to="#main-sl-1" className="main-btn primary-btn">Перейти к товару</Link>
+										<Link to="#main-sl-2" className="main-btn border-btn">Женские</Link>
+									</div>
+								</div>
+								<div className="main-img" style={{ backgroundImage: `url(${Main1Webp})` }}></div>
+							</div>
+						</div>
+						<div className="main-slide swiper-slide">
+							<div className="main-row">
+								<div className="main-info">
+									<div className="main-logo">
+										<div className="main-logo-img"><img src={Main1} alt=""/></div>
+										<span className="main-logo-txt">NIKE</span>
+									</div>
+									<h2 className="main-title">NIKE TEACH</h2>
+									<Link className="main-block" to="#modal-discount">
+										<span>СКИДКА</span>
+										<b>40%</b>
+									</Link>
+									<div className="buttons">
+										<Link to="#main-sl-1" className="main-btn primary-btn">Перейти к товару</Link>
+										<Link tp="#main-sl-2" className="main-btn border-btn">Женские</Link>
+									</div>
+								</div>
+								<div className="main-img" style={{ backgroundImage: `url(${Main1Webp})` }}></div>
+							</div>
+						</div>
+						<div className="main-slide swiper-slide">
+							<div className="main-row">
+								<div className="main-info">
+									<div className="main-logo">
+										<div className="main-logo-img"><img src={Main1} alt=""/></div>
+										<span className="main-logo-txt">NIKE</span>
+									</div>
+									<h2 className="main-title">NIKE TEACH</h2>
+									<Link className="main-block" to="#modal-discount">
+										<span>СКИДКА</span>
+										<b>40%</b>
+									</Link>
+									<div className="buttons">
+										<Link to="#main-sl-1" className="main-btn primary-btn">Перейти к товару</Link>
+										<Link to="#main-sl-2" className="main-btn border-btn">Женские</Link>
+									</div>
+								</div>
+								<div className="main-img" style={{ backgroundImage: `url(${Main1Webp})` }}></div>
+							</div>
+						</div>
+					</div>
+					<div className="main-actions">
+						<div className="main-num" id="main-num"><span>1</span> <b>/</b> 3</div>
+						<div className="main-bar run-animation"><i></i></div>
+						<div className="slider-arrows">
+							<div className="swiper-button-prev"></div>
+							<div className="swiper-button-next"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="main-sl-2" className="main-sl main-sl-2">
+				<div className="main-slider swiper-container" id="swiper2">
+					<div className="swiper-wrapper">
+						<div className="main-slide swiper-slide">
+							<div className="main-row">
+								<div className="main-info">
+									<div className="main-logo">
+										<div className="main-logo-img"><img src={Main1} alt=""/></div>
+										<span className="main-logo-txt">NIKE</span>
+									</div>
+									<h2 className="main-title">NIKE TEACH</h2>
+									<Link className="main-block" to="#modal-discount">
+										<span>СКИДКА</span>
+										<b>40%</b>
+									</Link>
+									<div className="buttons">
+										<Link to="#main-sl-1" className="main-btn primary-btn">Перейти к товару</Link>
+										<Link to="#main-sl-2" className="main-btn border-btn">Женские</Link>
+									</div>
+								</div>
+								<div className="main-img" style={{ backgroundImage: `url(${Main1Webp5})` }}></div>
+							</div>
+						</div>
+						<div className="main-slide swiper-slide">
+							<div className="main-row">
+								<div className="main-info">
+									<div className="main-logo">
+										<div className="main-logo-img"><img src={Main1} alt=""/></div>
+										<span className="main-logo-txt">NIKE</span>
+									</div>
+									<h2 className="main-title">NIKE TEACH</h2>
+									<Link className="main-block" to="#modal-discount">
+										<span>СКИДКА</span>
+										<b>40%</b>
+									</Link>
+									<div className="buttons">
+										<Link to="#main-sl-1" className="main-btn primary-btn">Перейти к товару</Link>
+										<Link to="#main-sl-2" className="main-btn border-btn">Женские</Link>
+									</div>
+								</div>
+								<div className="main-img" style={{ backgroundImage: `url(${Main1Webp5})` }}></div>
+							</div>
+						</div>
+						<div className="main-slide swiper-slide">
+							<div className="main-row">
+								<div className="main-info">
+									<div className="main-logo">
+										<div className="main-logo-img"><img src={Main1} alt=""/></div>
+										<span className="main-logo-txt">NIKE</span>
+									</div>
+									<h2 className="main-title">NIKE TEACH</h2>
+									<Link className="main-block" to="#modal-discount">
+										<span>СКИДКА</span>
+										<b>40%</b>
+									</Link>
+									<div className="buttons">
+										<Link to="#main-sl-1" className="main-btn primary-btn">Перейти к товару</Link>
+										<Link to="#main-sl-2" className="main-btn border-btn">Женские</Link>
+									</div>
+								</div>
+								<div className="main-img" style={{ backgroundImage: `url(${Main1Webp5})` }}></div>
+							</div>
+						</div>
+					</div>
+					<div className="main-actions">
+						<div className="main-num" id="main-num2"><span>1</span> <b>/</b> 3</div>
+						<div className="main-bar run-animation"><i></i></div>
+						<div className="slider-arrows">
+							<div className="swiper-button-prev"></div>
+							<div className="swiper-button-next"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
   );
 };
 

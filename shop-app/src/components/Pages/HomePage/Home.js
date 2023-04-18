@@ -1,4 +1,3 @@
-import React from 'react'
 import Ordering from './Sections/Ordering/Ordering'
 import Main from './Sections/Main/Main'
 import Brands from './Sections/Brands/Brands'
@@ -10,6 +9,7 @@ import Cloth from './Sections/Cloth/Cloth'
 import Universal from './Sections/Universal/Universal'
 import Review from './Sections/Review/Review'
 import Advantages from './Sections/Advantages/Advantages'
+import React from 'react'
 
 const HomePage = () => {
   return (

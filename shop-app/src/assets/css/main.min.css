@@ -3466,7 +3466,11 @@ button {
   .ordering-img svg {
     max-height: 70px;
   }
+
+  
 }
+
+
 .main {
   margin-bottom: 100px;
 }
@@ -3581,7 +3585,6 @@ button {
   height: 595px;
   background-repeat: no-repeat;
   background-position: center;
-  /* background-image: url("../img/img-1.webp"); */
   -webkit-background-size: cover;
   background-size: cover;
 }
