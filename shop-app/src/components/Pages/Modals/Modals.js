@@ -41,7 +41,7 @@ const Modals = () => {
 		</div>
 	</div>
 	
-	<div style="display: none;" id="modal-authorization" className="modal">
+	<div style={{display: 'none'}} id="modal-authorization" className="modal">
 		<h2 className="modal-title">Авторизация</h2>
 		<form action="">
 			<div className="input-block input-block-ico">
@@ -58,7 +58,7 @@ const Modals = () => {
 					<i className="checkbox-ico"></i>
 					<p>Запомнить меня</p>
 				</div>
-				<Link to="#" className="modal-link">Забыли пароль?</Link>
+				<Link to="#" className="modal-a">Забыли пароль?</Link>
 			</div>
 			<div className="modal-btns">
 				<button className="primary-btn">Авторизоваться</button>
@@ -66,7 +66,7 @@ const Modals = () => {
 			</div>
 		</form>
 	</div>
-	<div style="display: none;" id="modal-registration" className="modal">
+	<div style={{display: 'none'}} id="modal-registration" className="modal">
 		<h2 className="modal-title">Регистрация</h2>
 		<form action="">
 			<div className="input-block input-block-ico">
@@ -79,7 +79,7 @@ const Modals = () => {
 			</div>
 		</form>
 	</div>
-	<div style="display: none;" id="modal-registration2" className="modal">
+	<div style={{display: 'none'}} id="modal-registration2" className="modal">
 		<h2 className="modal-title">Регистрация</h2>
 		<form action="">
 			<div className="input-block">
@@ -92,7 +92,7 @@ const Modals = () => {
 			</div>
 		</form>
 	</div>
-	<div style="display: none;" id="modal-registration3" className="modal">
+	<div style={{display: 'none'}} id="modal-registration3" className="modal">
 		<h2 className="modal-title">Регистрация</h2>
 		<form action="">
 			<div className="input-block">
@@ -118,31 +118,31 @@ const Modals = () => {
 			</div>
 		</form>
 	</div>
-	<div style="display: none;" id="modal-registration4" className="modal">
+	<div style={{display: 'none'}} id="modal-registration4" className="modal">
 		<h2 className="modal-title">Регистрация прошла успешно</h2>
 		<div className="modal-registration-img">
 			<img src={Modal4Img} alt=""/>
 		</div>
 	</div>
-	<div style="display: none;" id="modal-card" className="modal modal-card">
+	<div style={{display: 'none'}} id="modal-card" className="modal modal-card">
 		<div className="modal-card-img"><img src={Modal1} alt=""/></div>
 		<div className="modal-card-content">
 			<h2 className="modal-card-title">СКИДКИ NIKE 40%</h2>
 			<p>Сейчас у компании nike можно получить огромные скидки в размере 40%</p>
 			<div className="modal-card-buttons">
-				<Link to="#" className="modal-link">Нет, спасибо</Link>
+				<Link to="#" className="modal-a">Нет, спасибо</Link>
 				<Link to="#" className="primary-btn">Посмотреть</Link>
 			</div>
 		</div>
 	</div>
-	<div style="display: none;" id="modal-education" className="modal modal-education">
+	<div style={{display: 'none'}} id="modal-education" className="modal modal-education">
 		<div className="modal-education-step active">
 			<div className="modal-education-info">
 				<span className="modal-education-sub">ОБУЧЕНИЕ</span>
 				<h2 className="modal-education-title">Хотите ли вы пройти обучение по покупке вещей на сайте?</h2>
 				<div className="modal-education-buttons">
 					<Link to="#" className="primary-btn modal-next">Пройти обучение</Link>
-					<Link to="#" className="modal-link modal-close">Закрыть окно обучения</Link>
+					<Link to="#" className="modal-a modal-close">Закрыть окно обучения</Link>
 				</div>
 			</div>
 			<div className="modal-education-img"><img src={Modal3Img} alt=""/></div>
@@ -154,7 +154,7 @@ const Modals = () => {
 				<h2 className="modal-education-title">Выберите бренд на нашем сервисе</h2>
 				<div className="modal-education-buttons">
 					<Link to="#" className="primary-btn modal-next">Продолжить</Link>
-					<Link to="#" className="modal-link modal-close">Закрыть окно обучения</Link>
+					<Link to="#" className="modal-a modal-close">Закрыть окно обучения</Link>
 				</div>
 			</div>
 			<div className="modal-education-img"><img src={Modal5Img} alt=""/></div>
@@ -166,7 +166,7 @@ const Modals = () => {
 				<h2 className="modal-education-title">Перейдите на сайт производителя</h2>
 				<div className="modal-education-buttons">
 					<Link to="#" className="primary-btn modal-next">Продолжить</Link>
-					<Link to="#" className="modal-link modal-close">Закрыть окно обучения</Link>
+					<Link to="#" className="modal-a modal-close">Закрыть окно обучения</Link>
 				</div>
 			</div>
 			<div className="modal-education-img"><img src={Modal5Img} alt=""/></div>
@@ -178,7 +178,7 @@ const Modals = () => {
 				<h2 className="modal-education-title">Выберите товар и скопируйте ссылку на товар</h2>
 				<div className="modal-education-buttons">
 					<Link to="#" className="primary-btn modal-next">Продолжить</Link>
-					<Link to="#" className="modal-link modal-close">Закрыть окно обучения</Link>
+					<Link to="#" className="modal-a modal-close">Закрыть окно обучения</Link>
 				</div>
 			</div>
 			<div className="modal-education-img"><img src={Modal5Img} alt=""/></div>
@@ -190,7 +190,7 @@ const Modals = () => {
 				<h2 className="modal-education-title">Вернитесь на наш сервис нажмите кнопку купить и вставьте ссылку</h2>
 				<div className="modal-education-buttons">
 					<Link to="#" className="primary-btn modal-next">Продолжить</Link>
-					<Link to="#" className="modal-link modal-close">Закрыть окно обучения</Link>
+					<Link to="#" className="modal-a modal-close">Закрыть окно обучения</Link>
 				</div>
 			</div>
 			<div className="modal-education-img"><img src={Modal5Img} alt=""/></div>
@@ -207,7 +207,7 @@ const Modals = () => {
 			<div className="modal-education-img"><img src={Modal5Img} alt=""/></div>
 		</div>
 	</div>
-	<div style="display: none;" id="modal-certificate" className="modal modal-certificate">
+	<div style={{display: 'none'}} id="modal-certificate" className="modal modal-certificate">
 		<div className="allTabs">
 			<ul className="tab-list">
 				<li><Link to="#md-tab-1" className="active">Интернет карта</Link></li>
@@ -237,7 +237,7 @@ const Modals = () => {
 			</div>
 		</div>
 	</div>
-	<div style="display: none;" id="modal-basket" className="modal modal-basket">
+	<div style={{display: 'none'}} id="modal-basket" className="modal modal-basket">
 		<h2 className="modal-basket-title"><span>Использование</span> кэшбек или сертификат</h2>
 		<div className="modal-basket-bl"><i className="hb-ico calculator-ico"></i><span>Сумма доставки включена в стоимость</span></div>
 		<form action="">
@@ -248,7 +248,7 @@ const Modals = () => {
 			<button className="primary-btn">Закрыть</button>
 		</form>
 	</div>
-	<div style="display: none;" id="modal-ticket" className="modal modal-ticket">
+	<div style={{display: 'none'}} id="modal-ticket" className="modal modal-ticket">
 		<form action="">
 			<h2 className="modal-ticket-title">Создание тикета</h2>
 			<div className="input-block">
@@ -280,7 +280,7 @@ const Modals = () => {
 			</div>
 		</form>
 	</div>
-	<div style="display: none;" id="modal-add" className="modal modal-add">
+	<div style={{display: 'none'}} id="modal-add" className="modal modal-add">
 		<h2 className="modal-ticket-title">Добавить в корзину</h2>
 		<form action="">
 			<div className="modal-search">
@@ -292,22 +292,22 @@ const Modals = () => {
 			</div>
 		</form>
 	</div>
-	<div style="display: none;" id="modal-track" className="modal modal-track">
+	<div style={{display: 'none'}} id="modal-track" className="modal modal-track">
 		<span className="modal-track-title">Доставлена</span>
 		<p>Ваша посылка успешно доставлена на отделение почты</p>
 		<div className="modal-track-btn">
 			<Link to="#" className="primary-btn modal-close">Закрыть</Link>
 		</div>
 	</div>
-	<div style="display: none;" id="modal-compilation" className="modal modal-compilation">
+	<div style={{display: 'none'}} id="modal-compilation" className="modal modal-compilation">
 		<span className="modal-track-title">Подборка</span>
 		<p>Вы не настроили подброки, для того что бы настроить нажмите на кнпоку ниже</p>
 		<div className="modal-card-buttons">
-			<Link to="#" className="modal-link modal-close">Нет, спасибо</Link>
+			<Link to="#" className="modal-a modal-close">Нет, спасибо</Link>
 			<Link to="#" className="primary-btn">Настроить</Link>
 		</div>
 	</div>
-	<div style="display: none;" id="modal-product" className="modal modal-product">
+	<div style={{display: 'none'}} id="modal-product" className="modal modal-product">
 		<h2 className="modal-ticket-title">Добавить в корзину</h2>
 		<form action="">
 			<div className="modal-search">

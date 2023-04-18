@@ -13,7 +13,7 @@ const Route = () => {
         </main>
         <Footer/>
         <div className="buy-wrap">
-        <Link to="#" className="buy-btn">
+        <Link to="/modals" className="buy-btn">
           Купить
         </Link>
       </div>
