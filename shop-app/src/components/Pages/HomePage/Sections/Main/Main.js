@@ -1,10 +1,19 @@
-import React from "react";
 import Main1 from "../../../../../assets/img/main-1.svg"
 import Main1Webp from "../../../../../assets/img/img-1.webp"
 import Main1Webp5 from "../../../../../assets/img/img-5.webp"
-import { Link } from "react-router-dom";
-// style={{ backgroundImage: `url(${ImageWebp1})` }}
+import"../../../../../assets/libs/swiper/swiper-bundle.min.css"
+import React,{useEffect} from "react";
+import $ from "jquery"
+
 const Main = () => {
+	useEffect(() => {
+		$.getScript('/js/scripts.min.js', () => {
+		  console.log('jQuery script loaded');
+		});
+		$.getScript('/js/common.js', () => {
+		  console.log('jQuery script loaded');
+		});
+	  }, []);
   return (
     <section className="main">
 		<div className="wrapper">
@@ -19,13 +28,13 @@ const Main = () => {
 										<span className="main-logo-txt">NIKE</span>
 									</div>
 									<h2 className="main-title">NIKE TEACH</h2>
-									<Link className="main-block" to="#modal-discount">
+									<a className="main-block" href="#modal-discount">
 										<span>СКИДКА</span>
 										<b>40%</b>
-									</Link>
+									</a>
 									<div className="buttons">
-										<Link to="#main-sl-1" className="main-btn primary-btn">Перейти к товару</Link>
-										<Link to="#main-sl-2" className="main-btn border-btn">Женские</Link>
+										<a href="#main-sl-1" className="main-btn primary-btn">Перейти к товару</a>
+										<a href="#main-sl-2" className="main-btn border-btn">Женские</a>
 									</div>
 								</div>
 								<div className="main-img" style={{ backgroundImage: `url(${Main1Webp})` }}></div>
@@ -39,13 +48,13 @@ const Main = () => {
 										<span className="main-logo-txt">NIKE</span>
 									</div>
 									<h2 className="main-title">NIKE TEACH</h2>
-									<Link className="main-block" to="#modal-discount">
+									<a className="main-block" href="#modal-discount">
 										<span>СКИДКА</span>
 										<b>40%</b>
-									</Link>
+									</a>
 									<div className="buttons">
-										<Link to="#main-sl-1" className="main-btn primary-btn">Перейти к товару</Link>
-										<Link tp="#main-sl-2" className="main-btn border-btn">Женские</Link>
+										<a href="#main-sl-1" className="main-btn primary-btn">Перейти к товару</a>
+										<a href="#main-sl-2" className="main-btn border-btn">Женские</a>
 									</div>
 								</div>
 								<div className="main-img" style={{ backgroundImage: `url(${Main1Webp})` }}></div>
@@ -59,13 +68,13 @@ const Main = () => {
 										<span className="main-logo-txt">NIKE</span>
 									</div>
 									<h2 className="main-title">NIKE TEACH</h2>
-									<Link className="main-block" to="#modal-discount">
+									<a className="main-block" href="#modal-discount">
 										<span>СКИДКА</span>
 										<b>40%</b>
-									</Link>
+									</a>
 									<div className="buttons">
-										<Link to="#main-sl-1" className="main-btn primary-btn">Перейти к товару</Link>
-										<Link to="#main-sl-2" className="main-btn border-btn">Женские</Link>
+										<a href="#main-sl-1" className="main-btn primary-btn">Перейти к товару</a>
+										<a href="#main-sl-2" className="main-btn border-btn">Женские</a>
 									</div>
 								</div>
 								<div className="main-img" style={{ backgroundImage: `url(${Main1Webp})` }}></div>
@@ -93,13 +102,13 @@ const Main = () => {
 										<span className="main-logo-txt">NIKE</span>
 									</div>
 									<h2 className="main-title">NIKE TEACH</h2>
-									<Link className="main-block" to="#modal-discount">
+									<a className="main-block" href="#modal-discount">
 										<span>СКИДКА</span>
 										<b>40%</b>
-									</Link>
+									</a>
 									<div className="buttons">
-										<Link to="#main-sl-1" className="main-btn primary-btn">Перейти к товару</Link>
-										<Link to="#main-sl-2" className="main-btn border-btn">Женские</Link>
+										<a href="#main-sl-1" className="main-btn primary-btn">Перейти к товару</a>
+										<a href="#main-sl-2" className="main-btn border-btn">Женские</a>
 									</div>
 								</div>
 								<div className="main-img" style={{ backgroundImage: `url(${Main1Webp5})` }}></div>
@@ -113,13 +122,13 @@ const Main = () => {
 										<span className="main-logo-txt">NIKE</span>
 									</div>
 									<h2 className="main-title">NIKE TEACH</h2>
-									<Link className="main-block" to="#modal-discount">
+									<a className="main-block" href="#modal-discount">
 										<span>СКИДКА</span>
 										<b>40%</b>
-									</Link>
+									</a>
 									<div className="buttons">
-										<Link to="#main-sl-1" className="main-btn primary-btn">Перейти к товару</Link>
-										<Link to="#main-sl-2" className="main-btn border-btn">Женские</Link>
+										<a href="#main-sl-1" className="main-btn primary-btn">Перейти к товару</a>
+										<a href="#main-sl-2" className="main-btn border-btn">Женские</a>
 									</div>
 								</div>
 								<div className="main-img" style={{ backgroundImage: `url(${Main1Webp5})` }}></div>
@@ -133,13 +142,13 @@ const Main = () => {
 										<span className="main-logo-txt">NIKE</span>
 									</div>
 									<h2 className="main-title">NIKE TEACH</h2>
-									<Link className="main-block" to="#modal-discount">
+									<a className="main-block" href="#modal-discount">
 										<span>СКИДКА</span>
 										<b>40%</b>
-									</Link>
+									</a>
 									<div className="buttons">
-										<Link to="#main-sl-1" className="main-btn primary-btn">Перейти к товару</Link>
-										<Link to="#main-sl-2" className="main-btn border-btn">Женские</Link>
+										<a href="#main-sl-1" className="main-btn primary-btn">Перейти к товару</a>
+										<a href="#main-sl-2" className="main-btn border-btn">Женские</a>
 									</div>
 								</div>
 								<div className="main-img" style={{ backgroundImage: `url(${Main1Webp5})` }}></div>
